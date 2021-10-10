@@ -1,0 +1,33 @@
+﻿@using LibraryManagementSystem.Models.Entity
+@model List<CATEGORY_TABLE>
+<!--@@model diyerek Models.Entity altindaki veri tabanindan
+kategori tablosunu liste icerisine atarak html sayfasina aktarmis oluyoruz ve gerekli islem icin kullaniyoruz-->
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div>
+    <h2 id="categoryTitle">Categories</h2>
+</div>
+
+<table style="position:center">
+    <tr>
+        <th>Category Id</th>
+        <th>Category Name</th>
+        <th>Delete Category</th>
+        <th>Update Category</th>
+    </tr>
+    <!--Model uzerinde gezinerek tum tablo verilerini siteye cekiyoruz-->
+    @foreach (var category in Model)
+    {
+        <tr>
+            <td>@category.ID</td>
+            <td>@category.NAME</td>
+            <td><a href="/Category/DeleteCategory/@category.ID" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Category/GetCategory/@category.ID" class="btn btn-info">Update</a></td>
+        </tr>
+    }
+</table>
+<br />
+<a style="margin-bottom:15px" href="/Category/AddCategory/" class="btn btn-primary">Add New Category</a>
