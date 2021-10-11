@@ -28,4 +28,6 @@ Tedbir amacli categoryPart branch'ı acip oraya yükledim çünkü veri tabanı 
 * NOT3 : Eğer projeye bir şey eklemek istediğinizde aradığınız şeyi bulamıyorsanız, -create new project en altta -install more tools and features diyerek .Net ile ilgili her şeyi işaretleyip -update tıklayın.
 * NOT4 : Eğer projeyi çalıştırdığınızda "System.NullReferenceException" veriyorsa App_Start -> BundleConfig.cs ->  bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                   "~/Scripts/bootstrap.js")); bu kod yerine -> bundles.Add(new Bundle("~/bundles/mybundle").Include(
-        "~/Scripts/bootstrap.js")); bu kodu yazmalısınız.
+        "~/Scripts/bootstrap.js")); bu kodu yazmalısınız.\
+        
+Kategori tablosu güzelleştirildi.
