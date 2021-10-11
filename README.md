@@ -25,3 +25,4 @@ Tedbir amacli categoryPart branch'ı acip oraya yükledim çünkü veri tabanı 
 
 NOT: Eğer kodu visual studio ile actığınızda sağ tarafta references, properties vs görünmüyorsa proje, dosya olarak açılmış demektir. Çalışan bir proje olarak açmak için altta bulunan LibraryManagementSystem.sln'e tıklayabilirsiniz.
 Eğer hala Model ksımının altında entity dosyası görünmüyorsa github desktop üzerinden yukarıda da yazıldığı gibi current branch'i categoryPart yapıp fetch origin diyerek gelmesini sağlayabilirsiniz.
+Eğer projeye bir şey eklemek istediğinizde aradığınız şeyi bulamıyorsanız, -create new project en altta -install more tools and features diyerek .Net ile ilgili her şeyi işaretleyip -update tıklayın.
