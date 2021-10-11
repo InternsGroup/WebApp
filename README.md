@@ -13,7 +13,7 @@ NOT: Code -> open with GitHub Desktop diyerek desktop üzerinden kodlama yapıla
 # # 10.10.2021
 
 Kategori bölümü tamamlandı. Kategori ekleme, güncelleme ve silme kısımları ayarlandı. Tasarım düzenlemesi gerekli.\
-Tedbir amacli categoryPart branch'ı acip oraya yükledim çünkü veri tabanı bağlantısında web.config içerisinde connectionStrings kısmında kalın yazılarla belirtilen yere herkesin kendi local bilgisayar adını yazarak öyle bağlanmayı denemesi lazım çözüm olmazsa başka bir formül bulmamız lazım.\
+Tedbir amacli categoryPart branch'ı acip oraya yükledim çünkü veri tabanı bağlantısında web.config içerisinde connectionStrings kısmında kalın yazılarla belirtilen yere herkesin kendi server'ının properties'ine bakıp adını kopyalayıp oraya yapıştırması ve öyle bağlanmayı denemesi lazım.\
 !!Database ismi ve tabloları burada paylaştığımız script olmalı farklı bir isim ve tablo yapısında sorun çıkabilir.!!
 
 ### web.config içerisindeki bölüm
