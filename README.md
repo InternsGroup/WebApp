@@ -20,3 +20,7 @@ Tedbir amacli categoryPart branch'ı acip oraya yükledim çünkü veri tabanı 
   <connectionStrings
     <add name="DB_LIBRARYEntities" connectionString="metadata=res://*/Models.Entity.Model1.csdl|res://*/Models.Entity.Model1.ssdl|res://*/Models.Entity.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=  **DESKTOP-UE5II9K**  ;initial catalog=DB_LIBRARY;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient"
   </connectionStrings>
+
+# # 11.10.2021
+
+Not olarak buraya düşüyorum 2. bölümün model kurulması kısmını yapamadım. Bende ado.net entity data model çıkmıyor hatta visual c# tamamen görünmüyor . İndirmeye çalıştığımda ise NuGET package manager da çıkmıyor. Ne yapabilirim? Projeyi oluştururken benimkinde visual c# yerine c# yazıyordu sorun o ise yeni bir proje açayım dedim ama visual c# proje seçeneklerinde çıkmıyor. Bunu nasıl çözebiliriz? 
