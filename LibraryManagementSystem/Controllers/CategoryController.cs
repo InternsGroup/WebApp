@@ -11,11 +11,13 @@ namespace LibraryManagementSystem.Controllers
     {
         //db nesnesi ile kütüphanedeki(veri tabanındaki) tablolara ve property lere ulasabiliriz
         DB_LIBRARYEntities db = new DB_LIBRARYEntities();
+
         // GET: Category
         public ActionResult Index()
         {
-            var values = db.CATEGORY_TABLE.ToList();
-            return View(values);
+             var values = db.CATEGORY_TABLE.ToList();
+             return View(values);
+           
         }
 
         //Index.cshtml sayfasinda add new category butonuna basilinca "get istegi" calisir ve httpget icin belirtilmis AddCategory() metodu calisir
@@ -24,6 +26,7 @@ namespace LibraryManagementSystem.Controllers
         {
             return View();
         }
+
 
         //AddCategory.cshtml sayfasinda add category butonuna basilinca "post istegi" calisir ve httppost icin belirtilmis AddCategory() metodu calisir
         [HttpPost]
