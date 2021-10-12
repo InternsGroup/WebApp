@@ -1,0 +1,97 @@
+﻿body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 210px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 16px;
+}
+
+    .sidebar a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        transition: 0.3s;
+        display: block;
+    }
+
+        .sidebar a:hover {
+            color: #00ff21;
+            background-color: #4d4847
+        }
+
+.main {
+    margin-left: 210px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+        .sidebar a {
+            font-size: 18px;
+        }
+}
+
+/* kategori tablosu icin css ayarlari -- baslangic*/
+table {
+    border: 1px solid #818181;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #818181;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+th {
+    background-color: #04AA6D;
+    color: black;
+}
+
+#categoryTitle {
+    border: 1px solid #818181;
+    text-align: center;
+    background-color: #04AA6D;
+    margin: 10px 0px 0px 0px;
+    color: black;
+    font-weight: bold;
+}
+/* kategori tablosu icin css ayarlari -- bitis*/
+
+/* kategori ekleme input alani background duzenleme -- baslangic*/
+#rcorners1 {
+    border-radius: 50px 50px 50px 50px;
+    background: #73AD21;
+    margin-top: 80px;
+    width: 600px;
+    height: 300px;
+}
+/* kategori ekleme input alani background duzenleme -- bitis*/
+
+
+/* AddCategory.cshtml body ayari 
+#addCategoryPage {
+    background-image: url('../../Images/library.jpg');
+    background-repeat: no-repeat;
+    background-size: cover
+}
+/* AddCategory.cshtml body ayari -- bitis*/
+

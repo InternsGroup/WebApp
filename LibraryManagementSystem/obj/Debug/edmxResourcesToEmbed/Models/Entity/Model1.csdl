@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_LIBRARYModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ACTION_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BOOK" Type="Int32" />
+    <Property Name="MEMBER" Type="Int32" />
+    <Property Name="EMPLOYEE" Type="Int32" />
+    <Property Name="BORROWDATE" Type="DateTime" Precision="0" />
+    <Property Name="RETURNDATE" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="BOOK_TABLE" Relationship="Self.FK_ACTION_TABLE_BOOK_TABLE" FromRole="ACTION_TABLE" ToRole="BOOK_TABLE" />
+    <NavigationProperty Name="MEMBER_TABLE" Relationship="Self.FK_ACTION_TABLE_MEMBER_TABLE" FromRole="ACTION_TABLE" ToRole="MEMBER_TABLE" />
+    <NavigationProperty Name="PENALTY_TABLE" Relationship="Self.FK_PENALTY_TABLE_ACTION_TABLE" FromRole="ACTION_TABLE" ToRole="PENALTY_TABLE" />
+  </EntityType>
+  <EntityType Name="AUTHOR_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SURNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DETAIL" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BOOK_TABLE" Relationship="Self.FK_BOOK_TABLE_AUTHOR_TABLE" FromRole="AUTHOR_TABLE" ToRole="BOOK_TABLE" />
+  </EntityType>
+  <EntityType Name="BOOK_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CATEGORY" Type="Byte" />
+    <Property Name="AUTHOR" Type="Int32" />
+    <Property Name="PRINTDATE" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="PUBLISHER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAGE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Boolean" />
+    <NavigationProperty Name="ACTION_TABLE" Relationship="Self.FK_ACTION_TABLE_BOOK_TABLE" FromRole="BOOK_TABLE" ToRole="ACTION_TABLE" />
+    <NavigationProperty Name="AUTHOR_TABLE" Relationship="Self.FK_BOOK_TABLE_AUTHOR_TABLE" FromRole="BOOK_TABLE" ToRole="AUTHOR_TABLE" />
+    <NavigationProperty Name="CATEGORY_TABLE" Relationship="Self.FK_BOOK_TABLE_CATEGORY_TABLE" FromRole="BOOK_TABLE" ToRole="CATEGORY_TABLE" />
+  </EntityType>
+  <EntityType Name="CASHBOX_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MONTH" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="CATEGORY_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BOOK_TABLE" Relationship="Self.FK_BOOK_TABLE_CATEGORY_TABLE" FromRole="CATEGORY_TABLE" ToRole="BOOK_TABLE" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EMPLOYEE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MEMBER_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SURNAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PHOTO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TELNUMBER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SCHOOL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ACTION_TABLE" Relationship="Self.FK_ACTION_TABLE_MEMBER_TABLE" FromRole="MEMBER_TABLE" ToRole="ACTION_TABLE" />
+    <NavigationProperty Name="PENALTY_TABLE" Relationship="Self.FK_PENALTY_TABLE_MEMBER_TABLE" FromRole="MEMBER_TABLE" ToRole="PENALTY_TABLE" />
+  </EntityType>
+  <EntityType Name="PENALTY_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MEMBER" Type="Int32" />
+    <Property Name="ACTION" Type="Int32" />
+    <Property Name="STARTDATE" Type="DateTime" Precision="0" />
+    <Property Name="ENDDATE" Type="DateTime" Precision="0" />
+    <Property Name="MONEY" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="ACTION_TABLE" Relationship="Self.FK_PENALTY_TABLE_ACTION_TABLE" FromRole="PENALTY_TABLE" ToRole="ACTION_TABLE" />
+    <NavigationProperty Name="MEMBER_TABLE" Relationship="Self.FK_PENALTY_TABLE_MEMBER_TABLE" FromRole="PENALTY_TABLE" ToRole="MEMBER_TABLE" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_ACTION_TABLE_BOOK_TABLE">
+    <End Role="BOOK_TABLE" Type="Self.BOOK_TABLE" Multiplicity="0..1" />
+    <End Role="ACTION_TABLE" Type="Self.ACTION_TABLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BOOK_TABLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ACTION_TABLE">
+        <PropertyRef Name="BOOK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ACTION_TABLE_MEMBER_TABLE">
+    <End Role="MEMBER_TABLE" Type="Self.MEMBER_TABLE" Multiplicity="0..1" />
+    <End Role="ACTION_TABLE" Type="Self.ACTION_TABLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MEMBER_TABLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ACTION_TABLE">
+        <PropertyRef Name="MEMBER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PENALTY_TABLE_ACTION_TABLE">
+    <End Role="ACTION_TABLE" Type="Self.ACTION_TABLE" Multiplicity="0..1" />
+    <End Role="PENALTY_TABLE" Type="Self.PENALTY_TABLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACTION_TABLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PENALTY_TABLE">
+        <PropertyRef Name="ACTION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BOOK_TABLE_AUTHOR_TABLE">
+    <End Role="AUTHOR_TABLE" Type="Self.AUTHOR_TABLE" Multiplicity="0..1" />
+    <End Role="BOOK_TABLE" Type="Self.BOOK_TABLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AUTHOR_TABLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BOOK_TABLE">
+        <PropertyRef Name="AUTHOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BOOK_TABLE_CATEGORY_TABLE">
+    <End Role="CATEGORY_TABLE" Type="Self.CATEGORY_TABLE" Multiplicity="0..1" />
+    <End Role="BOOK_TABLE" Type="Self.BOOK_TABLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORY_TABLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BOOK_TABLE">
+        <PropertyRef Name="CATEGORY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PENALTY_TABLE_MEMBER_TABLE">
+    <End Role="MEMBER_TABLE" Type="Self.MEMBER_TABLE" Multiplicity="0..1" />
+    <End Role="PENALTY_TABLE" Type="Self.PENALTY_TABLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MEMBER_TABLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PENALTY_TABLE">
+        <PropertyRef Name="MEMBER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_LIBRARYEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ACTION_TABLE" EntityType="Self.ACTION_TABLE" />
+    <EntitySet Name="AUTHOR_TABLE" EntityType="Self.AUTHOR_TABLE" />
+    <EntitySet Name="BOOK_TABLE" EntityType="Self.BOOK_TABLE" />
+    <EntitySet Name="CASHBOX_TABLE" EntityType="Self.CASHBOX_TABLE" />
+    <EntitySet Name="CATEGORY_TABLE" EntityType="Self.CATEGORY_TABLE" />
+    <EntitySet Name="EMPLOYEE_TABLE" EntityType="Self.EMPLOYEE_TABLE" />
+    <EntitySet Name="MEMBER_TABLE" EntityType="Self.MEMBER_TABLE" />
+    <EntitySet Name="PENALTY_TABLE" EntityType="Self.PENALTY_TABLE" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_ACTION_TABLE_BOOK_TABLE" Association="Self.FK_ACTION_TABLE_BOOK_TABLE">
+      <End Role="BOOK_TABLE" EntitySet="BOOK_TABLE" />
+      <End Role="ACTION_TABLE" EntitySet="ACTION_TABLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ACTION_TABLE_MEMBER_TABLE" Association="Self.FK_ACTION_TABLE_MEMBER_TABLE">
+      <End Role="MEMBER_TABLE" EntitySet="MEMBER_TABLE" />
+      <End Role="ACTION_TABLE" EntitySet="ACTION_TABLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PENALTY_TABLE_ACTION_TABLE" Association="Self.FK_PENALTY_TABLE_ACTION_TABLE">
+      <End Role="ACTION_TABLE" EntitySet="ACTION_TABLE" />
+      <End Role="PENALTY_TABLE" EntitySet="PENALTY_TABLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BOOK_TABLE_AUTHOR_TABLE" Association="Self.FK_BOOK_TABLE_AUTHOR_TABLE">
+      <End Role="AUTHOR_TABLE" EntitySet="AUTHOR_TABLE" />
+      <End Role="BOOK_TABLE" EntitySet="BOOK_TABLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BOOK_TABLE_CATEGORY_TABLE" Association="Self.FK_BOOK_TABLE_CATEGORY_TABLE">
+      <End Role="CATEGORY_TABLE" EntitySet="CATEGORY_TABLE" />
+      <End Role="BOOK_TABLE" EntitySet="BOOK_TABLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PENALTY_TABLE_MEMBER_TABLE" Association="Self.FK_PENALTY_TABLE_MEMBER_TABLE">
+      <End Role="MEMBER_TABLE" EntitySet="MEMBER_TABLE" />
+      <End Role="PENALTY_TABLE" EntitySet="PENALTY_TABLE" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

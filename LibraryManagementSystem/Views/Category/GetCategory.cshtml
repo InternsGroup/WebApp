@@ -1,0 +1,26 @@
+﻿@model LibraryManagementSystem.Models.Entity.CATEGORY_TABLE
+@{
+    ViewBag.Title = "GetCategory";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<!-- normal form yerine HTML Helper komutlari BeginForm kullaniyoruz  (form post metodunun farkli versiyonu) -->
+<!-- Html.BeginForm("KullanilacakActionResult","ActionResultinBulunduguController",FormMetodu) -->
+@using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
+{
+    <div class="form-group">
+        <!--LabelFor() category.ID sütununa ait labeli verir-->
+        @Html.LabelFor(category => category.ID)<!--Linq ifadesi ile kategori tablosundan html helper metodlari ile veri cekiyoruz-->
+        <!--TextBoxFor() secilen objenin category.ID bilgisini textbox icinde gosterir-->
+        @Html.TextBoxFor(category => category.ID, new { @class = "form-control", @readonly = "readonly" })
+        <br />
+        @*@Html.LabelFor(category => category.NAME)*@
+        <label>Category Name</label>
+        @Html.TextBoxFor(category => category.NAME, new { @class = "form-control", @required = "required", @maxlength = "25", @onkeypress = "return isNumericKey(event)" })
+    </div>
+    <div>
+        <button style="background-color:darkseagreen; margin-top:15px" class="btn btn-warning">Update</button>
+    </div>
+}
+
+
