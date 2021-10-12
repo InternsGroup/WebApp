@@ -260,7 +260,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NAME" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="BOOK_TABLE" Relationship="Self.FK_BOOK_TABLE_CATEGORY_TABLE" FromRole="CATEGORY_TABLE" ToRole="BOOK_TABLE" />
         </EntityType>
         <EntityType Name="EMPLOYEE_TABLE">
