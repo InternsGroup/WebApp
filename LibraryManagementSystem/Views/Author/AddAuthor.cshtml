@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "AddAuthor";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form class="form-group" method="post" style="margin-top:20px; text-decoration:double">
+    <div>
+        <label style="margin-top: 20px"> &nbsp; Author Name</label>
+        <input class="form-control" style="margin-top:10px" onkeypress="return isNumericKey(event)" type="text" name="NAME" maxlength="30" placeholder="Name" required />
+        <label style="margin-top: 20px"> &nbsp; Author Surname</label>
+        <input class="form-control" style="margin-top:10px" onkeypress="return isNumericKey(event)" type="text" name="SURNAME" maxlength="30" placeholder="Surname" required />
+        <label style="margin-top: 10px"> &nbsp; Author Detail</label>
+        <textarea class="form-control" style="margin-top:10px" type="text" name="DETAIL" maxlength="1000" placeholder="Detail" id="myTextArea"></textarea>
+    </div>
+    <div style="margin-top:20px">
+        <button id="defaultBtn" class="btn btn-danger" style="background-color: darkseagreen; margin-bottom: 15px; color:black">Add Author</button>
+    </div>
+</form>
+

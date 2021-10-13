@@ -26,7 +26,7 @@ kategori tablosunu liste icerisine atarak html sayfasina aktarmis oluyoruz ve ge
         <tr>
             <td style="background-color: lightgray;">@category.ID</td>
             <td style="background-color: lightgray;">@category.NAME</td>
-            <td style="background-color: lightgray;"><a href="/Category/DeleteCategory/@category.ID" class="btn btn-danger " style="background-color:darkred">Delete</a></td>
+            <td style="background-color: lightgray;"><a href="/Category/DeleteCategory/@category.ID" class="btn btn-danger"  onclick="return confirm(' Are you sure you want to delete Category:\n @category.NAME')" style="background-color:darkred">Delete</a></td>
             <td style="background-color: lightgray;"><a href="/Category/GetCategory/@category.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
         </tr>
     }

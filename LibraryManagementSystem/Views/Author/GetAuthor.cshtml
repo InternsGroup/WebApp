@@ -1,0 +1,26 @@
+﻿@model LibraryManagementSystem.Models.Entity.AUTHOR_TABLE
+@{
+    ViewBag.Title = "GetAuthor";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateAuthor", "Author", FormMethod.Post))
+{
+<div class="form-group">
+    <label>ID</label>
+    @Html.TextBoxFor(author => author.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <label>Author Name</label>
+    @Html.TextBoxFor(author => author.NAME, new { @class = "form-control", @required = "required", @maxlength = "30", @onkeypress = "return isNumericKey(event)" })
+    <br />
+    <label>Author Surname</label>
+    @Html.TextBoxFor(author => author.SURNAME, new { @class = "form-control", @required = "required", @maxlength = "30", @onkeypress = "return isNumericKey(event)" })
+    <br />
+    <label>Author Detail</label>
+    @Html.TextAreaFor(author => author.DETAIL, new { @class = "form-control", @maxlength = "1000", @id="myTextArea", @placeholder="Detail"})
+</div>
+    <div>
+        <button id="defaultBtn" style="background-color:darkseagreen; color:black; margin-top:15px" class="btn btn-info">Update</button>
+    </div>
+}
+

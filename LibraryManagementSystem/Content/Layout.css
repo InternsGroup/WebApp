@@ -93,7 +93,19 @@ th {
 }
 /* AddCategory.cshtml body ayari -- bitis*/
 
-#update:focus {
+#defaultBtn:focus {
     outline: none
 }
 
+#myTextArea {
+    resize: vertical;
+    min-height: 50px;
+    max-height: 150px
+}
+
+#tableDataOverFlow {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

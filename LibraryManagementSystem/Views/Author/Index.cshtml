@@ -1,0 +1,34 @@
+﻿@using LibraryManagementSystem.Models.Entity
+@model List<AUTHOR_TABLE>
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div>
+    <h2 id="categoryTitle" style="background-color:gray;">Authors</h2>
+</div>
+
+<table style="position:center; background-color: black; table-layout: fixed;">
+    <tr>
+        <th style="background-color:lightgray;">Author Id</th>
+        <th style="background-color:lightgray;">Author Name</th>
+        <th style="background-color:lightgray;">Author Surname</th>
+        <th style="background-color:lightgray;">Author Detail</th>
+        <th style="background-color:lightgray;">Delete Author</th>
+        <th style="background-color:lightgray;">Update Author</th>
+    </tr>
+    @foreach (var author in Model)
+    {
+        <tr>
+            <td style="background-color: lightgray;">@author.ID</td>
+            <td style="background-color: lightgray;">@author.NAME</td>
+            <td style="background-color: lightgray;">@author.SURNAME</td>
+            <td style="background-color: lightgray;" id="tableDataOverFlow">@author.DETAIL</td>
+            <td style="background-color: lightgray;"><a href="/Author/DeleteAuthor/@author.ID" class="btn btn-danger " style="background-color:darkred" onclick="return confirm(' Are you sure you want to delete Author:\n @author.NAME')">Delete</a></td>
+            <td style="background-color: lightgray;"><a href="/Author/GetAuthor/@author.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
+        </tr>
+    }
+</table>
+<br />
+<a style="margin-bottom:15px" href="/Author/AddAuthor/" class="btn btn-primary">Add New Author</a>
+
