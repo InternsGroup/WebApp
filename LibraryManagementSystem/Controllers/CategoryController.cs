@@ -9,10 +9,10 @@ namespace LibraryManagementSystem.Controllers
 {
     public class CategoryController : Controller
     {
-        //db nesnesi ile kütüphanedeki(veri tabanındaki) tablolara ve property lere ulasabiliriz
+        //db nesnesi ile kütüphanedeki(veri tabanındaki) tablolara ve property'lere ulasabiliriz
         DB_LIBRARYEntities db = new DB_LIBRARYEntities();
 
-        // GET: Category
+        
         public ActionResult Index()
         {
              var values = db.CATEGORY_TABLE.ToList();

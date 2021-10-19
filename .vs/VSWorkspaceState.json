@@ -3,9 +3,8 @@
     "",
     "\\LibraryManagementSystem",
     "\\LibraryManagementSystem\\Views",
-    "\\LibraryManagementSystem\\Views\\Book",
     "\\LibraryManagementSystem\\Views\\Category"
   ],
-  "SelectedNode": "\\LibraryManagementSystem\\Views\\Book\\Index.cshtml",
+  "SelectedNode": "\\LibraryManagementSystem\\Views\\Category\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

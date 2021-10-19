@@ -19,20 +19,24 @@
         <th style="background-color:lightgray;">Publisher</th>
         <th style="background-color:lightgray;">Page</th>
         <th style="background-color:lightgray;">Status</th>
+        <th style="background-color:lightgray;">Delete</th>
+        <th style="background-color:lightgray;">Update</th>
     </tr>
     @foreach (var book in Model)
     {
-        <tr>
-            <td style="background-color: lightgray;">@book.ID</td>
-            <td style="background-color: lightgray;">@book.NAME</td>
-            <td style="background-color: lightgray;">@book.CATEGORY_TABLE.NAME</td>
-            <td style="background-color: lightgray;">@book.AUTHOR_TABLE.NAME</td>
-            <td style="background-color: lightgray;">@book.PRINTDATE</td>
-            <td style="background-color: lightgray;">@book.PUBLISHER</td>
-            <td style="background-color: lightgray;">@book.PAGE</td>
-            <td style="background-color: lightgray;">@book.STATUS</td>
-        </tr>
+<tr>
+    <td style="background-color: lightgray;">@book.ID</td>
+    <td style="background-color: lightgray;">@book.NAME</td>
+    <td style="background-color: lightgray;">@book.CATEGORY_TABLE.NAME</td>
+    <td style="background-color: lightgray;">@book.AUTHOR_TABLE.NAME</td>
+    <td style="background-color: lightgray;">@book.PRINTDATE</td>
+    <td style="background-color: lightgray;">@book.PUBLISHER</td>
+    <td style="background-color: lightgray;">@book.PAGE</td>
+    <td style="background-color: lightgray;">@book.STATUS</td>
+    <td style="background-color: lightgray;"><a href="/Book/DeleteBook/@book.ID" class="btn btn-danger " style="background-color:darkred" onclick="return confirm(' Are you sure you want to delete Book:\n @book.NAME')">Delete</a></td>
+    <td style="background-color: lightgray;"><a href="/Book/GetBook/@book.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
+</tr>
     }
 </table>
 <br />
-<a style="margin-bottom:15px" href="/Category/AddCategory/" class="btn btn-primary">Add New Category</a>
+<a style="margin-bottom:15px" href="/Book/AddBook/" class="btn btn-primary">Add New Book</a>

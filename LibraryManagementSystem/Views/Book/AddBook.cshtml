@@ -1,0 +1,40 @@
+﻿@model LibraryManagementSystem.Models.Entity.BOOK_TABLE
+
+
+
+@{
+    ViewBag.Title = "AddBook";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+<form class="form-group" method="post" style="margin-top:20px; text-decoration:double">
+    <div style="margin-top: 10px">
+        <label>Book Name</label>
+        @Html.TextBoxFor(book => book.NAME, new { @class = "form-control" })
+    </div>
+    <div style="margin-top: 10px">
+        <label>Book Category</label>
+        @Html.DropDownListFor(category => category.ID,( List<SelectListItem>)ViewBag.categoryItem, new { @class = "form-control" })
+    </div>
+    <div style="margin-top: 10px">
+        <label>Book Author</label>
+        @Html.TextBoxFor(book => book.AUTHOR, new { @class = "form-control" })
+    </div>
+    <div style="margin-top: 10px">
+        <label>Print Date</label>
+        @Html.TextBoxFor(book => book.PRINTDATE, new { @class = "form-control" })
+    </div>
+    <div style="margin-top: 10px">
+        <label>Publisher</label>
+        @Html.TextBoxFor(book => book.PUBLISHER, new { @class = "form-control" })
+    </div>
+    <div style="margin-top: 10px">
+        <label>Page</label>
+        @Html.TextBoxFor(book => book.PAGE, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:20px">
+        <button id="defaultBtn" class="btn btn-danger" style="background-color: darkseagreen; margin-bottom: 15px; color:black">Add Book</button>
+    </div>
+</form>
