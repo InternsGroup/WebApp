@@ -1,0 +1,41 @@
+﻿@using LibraryManagementSystem.Models.Entity;
+@model List<BOOK_TABLE>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div>
+    <h2 id="categoryTitle" style="background-color:gray;">Books</h2>
+</div>
+
+<table style="position:center; background-color: black">
+    <tr>
+        <th style="background-color:lightgray;">Id</th>
+        <th style="background-color:lightgray;">Name</th>
+        <th style="background-color:lightgray;">Category</th>
+        <th style="background-color:lightgray;">Author</th>
+        <th style="background-color:lightgray;">Print Date</th>
+        <th style="background-color:lightgray;">Publisher</th>
+        <th style="background-color:lightgray;">Page</th>
+        <th style="background-color:lightgray;">Status</th>
+    </tr>
+
+    <!--Model uzerinde gezinerek tum tablo verilerini siteye cekiyoruz-->
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td style="background-color: lightgray;">@book.ID</td>
+            <td style="background-color: lightgray;">@book.NAME</td>
+            <td style="background-color: lightgray;">@book.CATEGORY_TABLE.NAME</td>
+            <td style="background-color: lightgray;">@book.AUTHOR_TABLE.NAME @book.AUTHOR_TABLE.SURNAME<td>
+            <td style="background-color: lightgray;">@book.PRINTDATE</td>
+            <td style="background-color: lightgray;">@book.PUBLISHER</td>
+            <td style="background-color: lightgray;">@book.PAGE</td>
+            <td style="background-color: lightgray;">@book.STATUS</td>
+        </tr>
+    }
+</table>
+<br />
+<a style="margin-bottom:15px" href="/Category/AddCategory/" class="btn btn-primary">Add New Category</a>
