@@ -3,8 +3,9 @@
     "",
     "\\LibraryManagementSystem",
     "\\LibraryManagementSystem\\Views",
+    "\\LibraryManagementSystem\\Views\\Book",
     "\\LibraryManagementSystem\\Views\\Category"
   ],
-  "SelectedNode": "\\LibraryManagementSystem\\LibraryManagementSystem.sln",
+  "SelectedNode": "\\LibraryManagementSystem\\Views\\Book\\AddBook.cshtml",
   "PreviewInSolutionExplorer": false
 }
