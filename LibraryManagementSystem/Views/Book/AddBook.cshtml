@@ -16,11 +16,11 @@
     </div>
     <div style="margin-top: 10px">
         <label>Book Category</label>
-        @Html.DropDownListFor(category => category.ID,( List<SelectListItem>)ViewBag.categoryItem, new { @class = "form-control" })
+        @Html.DropDownListFor(category => category.CATEGORY_TABLE.ID,( List<SelectListItem>)ViewBag.categoryItem, new { @class = "form-control" })
     </div>
     <div style="margin-top: 10px">
         <label>Book Author</label>
-        @Html.TextBoxFor(book => book.AUTHOR, new { @class = "form-control" })
+        @Html.DropDownListFor(author => author.AUTHOR_TABLE.ID, (List<SelectListItem>) ViewBag.authorItem , new { @class = "form-control" })
     </div>
     <div style="margin-top: 10px">
         <label>Print Date</label>
