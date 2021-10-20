@@ -31,3 +31,7 @@ Tedbir amacli categoryPart branch'ı acip oraya yükledim çünkü veri tabanı 
         "~/Scripts/bootstrap.js")); bu kodu yazmalısınız.\
         
 Kategori tablosu güzelleştirildi.
+
+# # 19.10.2021
+
+Kitap bölümü tamamlandı
