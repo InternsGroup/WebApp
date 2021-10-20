@@ -6,6 +6,6 @@
     "\\LibraryManagementSystem\\Views\\Book",
     "\\LibraryManagementSystem\\Views\\Category"
   ],
-  "SelectedNode": "\\LibraryManagementSystem\\Views\\Book\\Index.cshtml",
+  "SelectedNode": "\\LibraryManagementSystem\\Views\\Book\\AddBook.cshtml",
   "PreviewInSolutionExplorer": false
 }

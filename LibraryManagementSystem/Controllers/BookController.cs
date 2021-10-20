@@ -12,9 +12,10 @@ namespace LibraryManagementSystem.Controllers
     {
         DB_LIBRARYEntities db = new DB_LIBRARYEntities();
         
-        public ActionResult Index()
+        public ActionResult Index() 
         {
             var books = db.BOOK_TABLE.ToList();
+
             return View(books);
         }
 
