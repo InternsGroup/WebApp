@@ -11,7 +11,7 @@
     @Html.TextBoxFor(book => book.ID, new { @class = "form-control", @readonly = "readonly" })
     <br />
     <label>Book Name</label>
-    @Html.TextBoxFor(book => book.NAME, new { @class = "form-control", @required = "required", @maxlength = "30", @onkeypress = "return isNumericKey(event)" })
+    @Html.TextBoxFor(book => book.NAME, new { @class = "form-control", @required = "required", @maxlength = "30", @placeholder = "Name" })
     <br />
     <label>Category</label>
     @Html.DropDownListFor(category => category.CATEGORY_TABLE.ID, (List<SelectListItem>)ViewBag.categoryItem, new { @class = "form-control" })
@@ -20,13 +20,13 @@
     @Html.DropDownListFor(author => author.AUTHOR_TABLE.ID, (List<SelectListItem>)ViewBag.authorItem, new { @class = "form-control" })
     <br />
     <label>Print Date</label>
-    @Html.TextBoxFor(book => book.PRINTDATE, new { @class = "form-control", @required = "required", @maxlength = "30"})
+    @Html.TextBoxFor(book => book.PRINTDATE, new { @class = "form-control", @required = "required", @maxlength = "4", @onkeypress = "return isNumberKey(event)", @onfocus ="this.selectionStart = this.selectionEnd = this.value.length; " })
     <br />
     <label>Publisher</label>
-    @Html.TextBoxFor(book => book.PUBLISHER, new { @class = "form-control", @required = "required", @maxlength = "30", @onkeypress = "return isNumericKey(event)" })
+    @Html.TextBoxFor(book => book.PUBLISHER, new { @class = "form-control", @required = "required", @maxlength = "30", @placeholder = "Publisher" })
     <br />
     <label>Page</label>
-    @Html.TextBoxFor(book => book.PAGE, new { @class = "form-control", @required = "required", @maxlength = "30" })
+    @Html.TextBoxFor(book => book.PAGE, new { @class = "form-control", @required = "required", @maxlength = "4", @onkeypress = "return isNumberKey(event)" })
 </div>
     <div>
         <button id="defaultBtn" style="background-color:darkseagreen; color:black; margin-top:15px" class="btn btn-info">Update</button>

@@ -34,7 +34,7 @@ namespace LibraryManagementSystem.Controllers
         {
             db.CATEGORY_TABLE.Add(categoryObj);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
         }
 
         //Index.cshtml sayfasinda delete butonuna basilinca Category/DeleteCategory/category.ID calistirilarak secilen alanin id si gonderiliyor

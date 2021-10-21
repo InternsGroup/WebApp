@@ -1,0 +1,30 @@
+﻿@using LibraryManagementSystem.Models.Entity
+@model List<EMPLOYEE_TABLE>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div>
+    <h2 id="tableTitle" style="background-color:gray;">Employees</h2>
+</div>
+<table style="position:center; background-color: black">
+    <tr>
+        <th style="background-color:lightgray;">Employee Id</th>
+        <th style="background-color:lightgray;">Employee Name</th>
+        <th style="background-color:lightgray;">Delete Employee</th>
+        <th style="background-color:lightgray;">Update Employee</th>
+    </tr>
+    <!--Model uzerinde gezinerek tum tablo verilerini siteye cekiyoruz-->
+    @foreach (var employee in Model)
+    {
+        <tr>
+            <td style="background-color: lightgray;">@employee.ID</td>
+            <td style="background-color: lightgray;">@employee.EMPLOYEE</td>
+            <td style="background-color: lightgray;"><a href="/Employee/DeleteEmployee/@employee.ID" class="btn btn-danger" onclick="return confirm(' Are you sure you want to delete Employee:\n @employee.EMPLOYEE')" style="background-color:darkred">Delete</a></td>
+            <td style="background-color: lightgray;"><a href="/Employee/GetEmployee/@employee.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
+        </tr>
+    }
+</table>
+<br />
+<a style="margin-bottom:15px" href="/Employee/AddEmployee/" class="btn btn-primary">Add New Employee</a>

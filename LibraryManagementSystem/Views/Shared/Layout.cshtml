@@ -9,14 +9,14 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Layout.css" rel="stylesheet" /><!--Layout.css sidebar ve kategori tablosu ayarlarini iceriyor-->
 </head>
-<body>
+<body >
     <span class="sidebar">
         <a href="#"><i class="glyphicon glyphicon-home"></i> &nbsp; Home Page</a>
         <a href="/Category/Index/"><i class="glyphicon glyphicon-list"></i> &nbsp; Categories</a>
         <a href="/Book/Index"><i class="glyphicon glyphicon-book"></i> &nbsp; Books</a>
         <a href="/Author/Index/"><i class="glyphicon glyphicon-pencil"></i> &nbsp; Authors</a>
-        <a href="#"><i class="glyphicon glyphicon-user"></i> &nbsp; Users</a>
-        <a href="#"><i class="glyphicon glyphicon-tower"></i> &nbsp; Employees</a>
+        <a href="/Member/Index/"><i class="glyphicon glyphicon-user"></i> &nbsp; Users</a>
+        <a href="/Employee/Index/"><i class="glyphicon glyphicon-tower"></i> &nbsp; Employees</a>
         <a href="#"><i class="glyphicon glyphicon-arrow-left"></i> &nbsp; Lend Book</a>
         <a href="#"><i class="glyphicon glyphicon-arrow-right"></i> &nbsp; Receive Book</a>
         <a href="#"><i class="glyphicon glyphicon-dashboard"></i> &nbsp; Actions</a>
@@ -29,5 +29,7 @@
         @RenderBody()
     </div>
     <script src="~/Scripts/input.js"></script><!--input islemini kontrol eden js kodlari    -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
 </body>
 </html>

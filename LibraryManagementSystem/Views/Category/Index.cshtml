@@ -10,7 +10,7 @@ kategori tablosunu liste icerisine atarak html sayfasina aktarmis oluyoruz ve ge
 }
 
 <div>
-    <h2 id="categoryTitle" style="background-color:gray;">Categories</h2>
+    <h2 id="tableTitle" style="background-color:gray;">Categories</h2>
 </div>
 
 <table style="position:center; background-color: black">
@@ -20,16 +20,15 @@ kategori tablosunu liste icerisine atarak html sayfasina aktarmis oluyoruz ve ge
         <th style="background-color:lightgray;">Delete Category</th>
         <th style="background-color:lightgray;">Update Category</th>
     </tr>
-    <!--Model uzerinde gezinerek tum tablo verilerini siteye cekiyoruz-->
     @foreach (var category in Model)
     {
         <tr>
             <td style="background-color: lightgray;">@category.ID</td>
             <td style="background-color: lightgray;">@category.NAME</td>
-            <td style="background-color: lightgray;"><a href="/Category/DeleteCategory/@category.ID" class="btn btn-danger"  onclick="return confirm(' Are you sure you want to delete Category:\n @category.NAME')" style="background-color:darkred">Delete</a></td>
+            <td style="background-color: lightgray;"><a href="/Category/DeleteCategory/@category.ID" class="btn btn-danger" onclick="return confirm(' Are you sure you want to delete Category:\n @category.NAME')" style="background-color:darkred">Delete</a></td>
             <td style="background-color: lightgray;"><a href="/Category/GetCategory/@category.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
         </tr>
     }
 </table>
 <br />
-<a style="margin-bottom:15px"  href="/Category/AddCategory/" class="btn btn-primary">Add New Category</a>
+<a style="margin-bottom:15px" href="/Category/AddCategory/" class="btn btn-primary">Add New Category</a>

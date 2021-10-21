@@ -187,3 +187,7 @@ C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\obj\Debug
 C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.dll
 C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
+D:\Repos\Github Projects\WebApp\LibraryManagementSystem\bin\PagedList.dll
+D:\Repos\Github Projects\WebApp\LibraryManagementSystem\bin\PagedList.Mvc.dll
+D:\Repos\Github Projects\WebApp\LibraryManagementSystem\bin\PagedList.xml
+D:\Repos\Github Projects\WebApp\LibraryManagementSystem\bin\PagedList.Mvc.xml

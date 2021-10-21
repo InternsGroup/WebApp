@@ -11,12 +11,16 @@ namespace LibraryManagementSystem.Controllers
     public class BookController : Controller
     {
         DB_LIBRARYEntities db = new DB_LIBRARYEntities();
-        
-        public ActionResult Index() 
-        {
-            var books = db.BOOK_TABLE.ToList();
 
-            return View(books);
+        public ActionResult Index(string searchInput)
+        {
+            var books = from allBooks in db.BOOK_TABLE select allBooks;
+            if (!string.IsNullOrEmpty(searchInput))
+            {
+                books = books.Where(book => book.NAME.Contains(searchInput));
+            }
+            //var books = db.BOOK_TABLE.ToList();
+            return View(books.ToList());
         }
 
         [HttpGet]

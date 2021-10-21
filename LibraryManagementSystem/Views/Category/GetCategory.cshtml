@@ -16,7 +16,7 @@
         <br />
         @*@Html.LabelFor(category => category.NAME)*@
         <label>Category Name</label>
-        @Html.TextBoxFor(category => category.NAME, new { @class = "form-control", @required = "required", @maxlength = "25", @onkeypress = "return isNumericKey(event)" })
+        @Html.TextBoxFor(category => category.NAME, new { @class = "form-control", @required = "required", @maxlength = "25", @onkeypress = "return isNumericKey(event)"})
     </div>
     <div>
         <button id="defaultBtn" style="background-color:darkseagreen; color:black; margin-top:15px" class="btn btn-info">Update</button>

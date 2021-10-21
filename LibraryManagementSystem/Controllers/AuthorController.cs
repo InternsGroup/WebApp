@@ -28,7 +28,7 @@ namespace LibraryManagementSystem.Controllers
         {
             db.AUTHOR_TABLE.Add(authorObj);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
         }
 
         public ActionResult DeleteAuthor(int id)

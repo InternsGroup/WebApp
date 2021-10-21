@@ -6,10 +6,21 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
-
+<head>
+</head>
+@using (Html.BeginForm("Index", "Book", FormMethod.Get))
+{
+    <div class="container">
+        <div style="margin-top:15px; margin-bottom:15px; margin:auto; margin-top:15px; width:50%">
+            @Html.TextBox("searchInput", "", new { @class = "form-control", @style = "width:60%;float:left", @placeholder = "Search book name...", @id = "searchInput", @maxlength = "30" })
+            <input class="btn btn-success" style="margin-left:15px; width:20%" type="submit" value="Search">
+            <button class="btn btn-info" style="margin-left:7px" onclick="ClearFields();"><i class="glyphicon glyphicon-refresh"></i></button>
+        </div>
+    </div>
+}
 
 <div>
-    <h2 id="categoryTitle" style="background-color:gray;">Books</h2>
+    <h2 id="tableTitle" style="background-color:gray;">Books</h2>
 </div>
 
 
@@ -30,11 +41,11 @@
     {
         <tr>
             <td style="background-color: lightgray;">@book.ID</td>
-            <td style="background-color: lightgray;">@book.NAME</td>
+            <td style="background-color: lightgray;" id="tableDataOverFlow">@book.NAME</td>
             <td style="background-color: lightgray;">@book.CATEGORY_TABLE.NAME</td>
-            <td style="background-color: lightgray;">@book.AUTHOR_TABLE.NAME</td>
+            <td style="background-color: lightgray;">@book.AUTHOR_TABLE.NAME&nbsp;@book.AUTHOR_TABLE.SURNAME </td>
             <td style="background-color: lightgray;">@book.PRINTDATE</td>
-            <td style="background-color: lightgray;">@book.PUBLISHER</td>
+            <td style="background-color: lightgray;" id="tableDataOverFlow">@book.PUBLISHER</td>
             <td style="background-color: lightgray;">@book.PAGE</td>
             <td style="background-color: lightgray;">@book.STATUS</td>
             <td style="background-color: lightgray;"><a href="/Book/DeleteBook/@book.ID" class="btn btn-danger " style="background-color:darkred" onclick="return confirm(' Are you sure you want to delete Book:\n @book.NAME')">Delete</a></td>
@@ -44,3 +55,9 @@
 </table>
 <br />
 <a style="margin-bottom:15px" href="/Book/AddBook/" class="btn btn-primary">Add New Book</a>
+@if (Model.Count() == 0)
+{
+    <div class="alert alert-danger" role="alert" style="width:50%;text-align:center;margin:auto">
+        <b>No books found.</b>
+    </div>
+}

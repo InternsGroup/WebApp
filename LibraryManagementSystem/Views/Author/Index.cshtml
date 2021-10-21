@@ -5,7 +5,7 @@
 }
 
 <div>
-    <h2 id="categoryTitle" style="background-color:gray;">Authors</h2>
+    <h2 id="tableTitle" style="background-color:gray;">Authors</h2>
 </div>
 
 <table style="position:center; background-color: black; table-layout: fixed;">
@@ -24,7 +24,7 @@
             <td style="background-color: lightgray;">@author.NAME</td>
             <td style="background-color: lightgray;">@author.SURNAME</td>
             <td style="background-color: lightgray;" id="tableDataOverFlow">@author.DETAIL</td>
-            <td style="background-color: lightgray;"><a href="/Author/DeleteAuthor/@author.ID" class="btn btn-danger " style="background-color:darkred" onclick="return confirm(' Are you sure you want to delete Author:\n @author.NAME')">Delete</a></td>
+            <td style="background-color: lightgray;"><a href="/Author/DeleteAuthor/@author.ID" class="btn btn-danger " style="background-color:darkred" onclick="return confirm(' Are you sure you want to delete Author:\n @author.NAME @author.SURNAME')">Delete</a></td>
             <td style="background-color: lightgray;"><a href="/Author/GetAuthor/@author.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
         </tr>
     }

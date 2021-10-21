@@ -1,0 +1,45 @@
+﻿@using LibraryManagementSystem.Models.Entity
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<MEMBER_TABLE>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div>
+    <h2 id="tableTitle" style="background-color:gray;">Members</h2>
+</div>
+<table style="position:center; background-color: black">
+    <tr>
+        <th style="background-color:lightgray;">Member Id</th>
+        <th style="background-color:lightgray;">Member Name</th>
+        <th style="background-color:lightgray;">Member Surname</th>
+        <th style="background-color:lightgray;">Email</th>
+        <th style="background-color:lightgray;">Username</th>
+        <th style="background-color:lightgray;">Password</th>
+        <th style="background-color:lightgray;">Phone Number</th>
+        <th style="background-color:lightgray;">School</th>
+        <th style="background-color:lightgray;">Delete</th>
+        <th style="background-color:lightgray;">Update</th>
+    </tr>
+    <!--Model uzerinde gezinerek tum tablo verilerini siteye cekiyoruz-->
+    @foreach (var member in Model)
+    {
+        <tr>
+            <td style="background-color: lightgray;">@member.ID</td>
+            <td style="background-color: lightgray;">@member.NAME</td>
+            <td style="background-color: lightgray;">@member.SURNAME</td>
+            <td style="background-color: lightgray;">@member.EMAIL</td>
+            <td style="background-color: lightgray;">@member.USERNAME</td>
+            <td style="background-color: lightgray;">@member.PASSWORD</td>
+            <td style="background-color: lightgray;">@member.TELNUMBER</td>
+            <td style="background-color: lightgray;">@member.SCHOOL</td>
+            <td style="background-color: lightgray;"><a href="/Member/DeleteMember/@member.ID" class="btn btn-danger" onclick="return confirm(' Are you sure you want to delete Employee:\n @member.NAME @member.SURNAME')" style="background-color:darkred">Delete</a></td>
+            <td style="background-color: lightgray;"><a href="/Member/GetMember/@member.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
+        </tr>
+    }
+</table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+<a style="margin-bottom:15px" href="/Member/AddMember/" class="btn btn-primary">Add New Member</a>
+
