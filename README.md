@@ -35,3 +35,11 @@ Kategori tablosu güzelleştirildi.
 # # 19.10.2021
 
 Kitap bölümü tamamlandı
+
+# # 21.10.2021
+
+-Kitap bölümüne arama çubuğu eklendi --> diğer bölümlere de aynı şekilde ekleyebiliriz\
+-Personel ekleme, güncelleme, silme kısmı ayarlandı\
+-Üye ekleme, güncelleme, silme ve input validation kısımları tamamlandı\
+-Üye tablosu için sayfalama ayarı yapıldı (yani her sayfada tablo içinde belirli sayıda üye gösteriliyor) --> diger bölümlere de eklenebilir, farklı tipleri kullanılabilir 
+
