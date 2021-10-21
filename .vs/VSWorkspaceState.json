@@ -2,13 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\LibraryManagementSystem",
-    "\\LibraryManagementSystem\\Content",
-    "\\LibraryManagementSystem\\Controllers",
-    "\\LibraryManagementSystem\\Views",
-    "\\LibraryManagementSystem\\Views\\Book",
-    "\\LibraryManagementSystem\\Views\\Category",
-    "\\LibraryManagementSystem\\Views\\Employee"
+    "\\LibraryManagementSystem\\Views"
   ],
-  "SelectedNode": "\\LibraryManagementSystem\\Controllers\\BookController.cs",
+  "SelectedNode": "\\LibraryManagementSystem\\Views\\Member",
   "PreviewInSolutionExplorer": false
 }
