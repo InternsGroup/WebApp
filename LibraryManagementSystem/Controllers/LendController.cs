@@ -16,15 +16,14 @@ namespace LibraryManagementSystem.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult Lend()
         {
             return View();
         }
 
-
-        //AddCategory.cshtml sayfasinda add category butonuna basilinca "post istegi" calisir ve httppost icin belirtilmis AddCategory() metodu calisir
         [HttpPost]
-        public ActionResult AddLending(ACTION_TABLE lendObj)
+        public ActionResult Lend(ACTION_TABLE lendObj)
         {
             db.ACTION_TABLE.Add(lendObj);
             db.SaveChanges();
