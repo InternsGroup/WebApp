@@ -183,7 +183,6 @@ C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\bin\Syste
 C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\bin\System.Web.WebPages.Deployment.xml
 C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\bin\System.Web.WebPages.Razor.xml
 C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\bin\Antlr3.Runtime.pdb
-C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.AssemblyReference.cache
 C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.dll
 C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
@@ -191,3 +190,9 @@ D:\Repos\Github Projects\WebApp\LibraryManagementSystem\bin\PagedList.dll
 D:\Repos\Github Projects\WebApp\LibraryManagementSystem\bin\PagedList.Mvc.dll
 D:\Repos\Github Projects\WebApp\LibraryManagementSystem\bin\PagedList.xml
 D:\Repos\Github Projects\WebApp\LibraryManagementSystem\bin\PagedList.Mvc.xml
+C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\bin\PagedList.dll
+C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\bin\PagedList.Mvc.dll
+C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\bin\PagedList.xml
+C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\bin\PagedList.Mvc.xml
+C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csprojAssemblyReference.cache
+C:\Users\saz5ib\Documents\GitHub\INF303-WEBAPP\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.CopyComplete
