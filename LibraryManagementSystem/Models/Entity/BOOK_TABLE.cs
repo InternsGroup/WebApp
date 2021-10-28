@@ -17,6 +17,7 @@ namespace LibraryManagementSystem.Models.Entity
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public BOOK_TABLE()
         {
+            this.STATUS = true;
             this.ACTION_TABLE = new HashSet<ACTION_TABLE>();
         }
     

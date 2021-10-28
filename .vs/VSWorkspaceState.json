@@ -2,7 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\LibraryManagementSystem",
-    "\\LibraryManagementSystem\\Views"
+    "\\LibraryManagementSystem\\Controllers",
+    "\\LibraryManagementSystem\\Views",
+    "\\LibraryManagementSystem\\Views\\Book",
+    "\\LibraryManagementSystem\\Views\\Employee",
+    "\\LibraryManagementSystem\\Views\\Lend"
   ],
+  "SelectedNode": "\\LibraryManagementSystem\\Controllers\\LendController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -13,7 +13,8 @@ namespace LibraryManagementSystem.Controllers
         DB_LIBRARYEntities db = new DB_LIBRARYEntities();
         public ActionResult Index()
         {
-            return View();
+            var loanedBooksList = db.ACTION_TABLE.ToList();
+            return View(loanedBooksList);
         }
 
         [HttpGet]
