@@ -88,6 +88,7 @@ namespace LibraryManagementSystem.Controllers
             book.AUTHOR = author.ID;
             book.PRINTDATE = bookObj.PRINTDATE;
             book.PAGE = bookObj.PAGE;
+            book.STATUS = true;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

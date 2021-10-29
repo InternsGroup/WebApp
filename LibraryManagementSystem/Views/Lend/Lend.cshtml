@@ -1,4 +1,5 @@
 ﻿@model LibraryManagementSystem.Models.Entity.ACTION_TABLE
+
 @{
     ViewBag.Title = "Lend";
     Layout = "~/Views/Shared/Layout.cshtml";
@@ -21,13 +22,13 @@
     </div>
     <div style="margin-top: 10px">
         <label>Borrow Date</label>
-        <input type="text" class="form-control" name="BORROWDATE" value=@DateTime.Now.ToShortDateString() />
+        <input type="text" class="form-control" name="BORROWDATE" value=@DateTime.Now.ToString("dd/MM/yyyy") />
     </div>
     <div style="margin-top: 10px">
         <label>Return Date</label>
-        <input type="text" class="form-control" name="RETURNDATE" value=@DateTime.Now.AddDays(7) />
+        <input type="text" class="form-control" name="RETURNDATE" value=@DateTime.Now.AddDays(7).ToString("dd/MM/yyyy") />
     </div>
     <div style="margin-top:20px">
-        <button   class="btn btn-group" style="background-color: darkseagreen; margin-bottom: 15px; color:black">Lend Book</button>
+        <button class="btn btn-group" style="background-color: darkseagreen; margin-bottom: 15px; color:black">Lend Book</button>
     </div>
 </form>

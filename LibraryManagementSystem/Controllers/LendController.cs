@@ -27,8 +27,28 @@ namespace LibraryManagementSystem.Controllers
         public ActionResult Lend(ACTION_TABLE lendObj)
         {
             db.ACTION_TABLE.Add(lendObj);
-            db.SaveChanges();
-            return RedirectToAction("Lend");
+            var bookObj = db.BOOK_TABLE.Find(lendObj.BOOK);
+            if (bookObj.STATUS == false)
+            {
+                //hata verdir kitap zaten birinde alamazsın diye
+            }
+            else
+            {
+                bookObj.STATUS = false;
+                db.SaveChanges();
+            }
+            
+            return RedirectToAction("Index");
         }
+
+        public ActionResult ReturnBook(int id)
+        {
+            var lendObj = db.ACTION_TABLE.Find(id);
+            lendObj.BOOK_TABLE.STATUS = true;
+            
+            return View("ReturnBook", lendObj);
+        }
+
+       
     }
 }
