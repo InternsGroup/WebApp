@@ -48,4 +48,4 @@ Kategori tablosu güzelleştirildi.
 * Kitap ödünç verme ve alma bölümleri tamamlandı.
 * Chat kısmını eklemek için işimize yarayabilecek linkler 
    ** https://pusher.com/tutorials/chat-aspnet/
-   
+* Artık en güncel branch main (merge'ledim) ona ekstra branch açılarak çalışılabilinir.
