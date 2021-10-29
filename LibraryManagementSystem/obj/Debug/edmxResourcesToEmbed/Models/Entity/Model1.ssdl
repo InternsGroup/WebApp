@@ -10,6 +10,8 @@
     <Property Name="EMPLOYEE" Type="tinyint" />
     <Property Name="BORROWDATE" Type="smalldatetime" />
     <Property Name="RETURNDATE" Type="smalldatetime" />
+    <Property Name="MEMBERRETURNDATE" Type="smalldatetime" />
+    <Property Name="ACTIONSTATUS" Type="bit" />
   </EntityType>
   <EntityType Name="AUTHOR_TABLE">
     <Key>

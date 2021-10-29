@@ -15,6 +15,8 @@
           <Property Name="EMPLOYEE" Type="tinyint" />
           <Property Name="BORROWDATE" Type="smalldatetime" />
           <Property Name="RETURNDATE" Type="smalldatetime" />
+          <Property Name="MEMBERRETURNDATE" Type="smalldatetime" />
+          <Property Name="ACTIONSTATUS" Type="bit" />
         </EntityType>
         <EntityType Name="AUTHOR_TABLE">
           <Key>
@@ -236,6 +238,8 @@
           <NavigationProperty Name="MEMBER_TABLE" Relationship="Self.FK_ACTION_TABLE_MEMBER_TABLE" FromRole="ACTION_TABLE" ToRole="MEMBER_TABLE" />
           <NavigationProperty Name="PENALTY_TABLE" Relationship="Self.FK_PENALTY_TABLE_ACTION_TABLE" FromRole="ACTION_TABLE" ToRole="PENALTY_TABLE" />
           <NavigationProperty Name="EMPLOYEE_TABLE" Relationship="DB_LIBRARYModel.FK_ACTION_TABLE_EMPLOYEE_TABLE" FromRole="ACTION_TABLE" ToRole="EMPLOYEE_TABLE" />
+          <Property Name="ACTIONSTATUS" Type="Boolean" />
+          <Property Name="MEMBERRETURNDATE" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="AUTHOR_TABLE">
           <Key>
@@ -458,6 +462,8 @@
           <EntitySetMapping Name="ACTION_TABLE">
             <EntityTypeMapping TypeName="DB_LIBRARYModel.ACTION_TABLE">
               <MappingFragment StoreEntitySet="ACTION_TABLE">
+                <ScalarProperty Name="MEMBERRETURNDATE" ColumnName="MEMBERRETURNDATE" />
+                <ScalarProperty Name="ACTIONSTATUS" ColumnName="ACTIONSTATUS" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="BOOK" ColumnName="BOOK" />
                 <ScalarProperty Name="MEMBER" ColumnName="MEMBER" />

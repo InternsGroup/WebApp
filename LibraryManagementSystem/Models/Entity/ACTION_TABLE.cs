@@ -26,6 +26,8 @@ namespace LibraryManagementSystem.Models.Entity
         public Nullable<byte> EMPLOYEE { get; set; }
         public Nullable<System.DateTime> BORROWDATE { get; set; }
         public Nullable<System.DateTime> RETURNDATE { get; set; }
+        public Nullable<bool> ACTIONSTATUS { get; set; }
+        public Nullable<System.DateTime> MEMBERRETURNDATE { get; set; }
     
         public virtual BOOK_TABLE BOOK_TABLE { get; set; }
         public virtual MEMBER_TABLE MEMBER_TABLE { get; set; }
