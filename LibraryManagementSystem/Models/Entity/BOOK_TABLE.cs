@@ -29,6 +29,7 @@ namespace LibraryManagementSystem.Models.Entity
         public string PUBLISHER { get; set; }
         public string PAGE { get; set; }
         public Nullable<bool> STATUS { get; set; }
+        public string BOOKIMAGE { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ACTION_TABLE> ACTION_TABLE { get; set; }

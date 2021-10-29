@@ -39,6 +39,7 @@
           <Property Name="PUBLISHER" Type="varchar" MaxLength="50" />
           <Property Name="PAGE" Type="varchar" MaxLength="4" Nullable="false" />
           <Property Name="STATUS" Type="bit" />
+          <Property Name="BOOKIMAGE" Type="varchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="CASHBOX_TABLE">
           <Key>
@@ -266,6 +267,7 @@
           <NavigationProperty Name="ACTION_TABLE" Relationship="Self.FK_ACTION_TABLE_BOOK_TABLE" FromRole="BOOK_TABLE" ToRole="ACTION_TABLE" />
           <NavigationProperty Name="AUTHOR_TABLE" Relationship="Self.FK_BOOK_TABLE_AUTHOR_TABLE" FromRole="BOOK_TABLE" ToRole="AUTHOR_TABLE" />
           <NavigationProperty Name="CATEGORY_TABLE" Relationship="Self.FK_BOOK_TABLE_CATEGORY_TABLE" FromRole="BOOK_TABLE" ToRole="CATEGORY_TABLE" />
+          <Property Name="BOOKIMAGE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="CASHBOX_TABLE">
           <Key>
@@ -486,6 +488,7 @@
           <EntitySetMapping Name="BOOK_TABLE">
             <EntityTypeMapping TypeName="DB_LIBRARYModel.BOOK_TABLE">
               <MappingFragment StoreEntitySet="BOOK_TABLE">
+                <ScalarProperty Name="BOOKIMAGE" ColumnName="BOOKIMAGE" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="NAME" ColumnName="NAME" />
                 <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
