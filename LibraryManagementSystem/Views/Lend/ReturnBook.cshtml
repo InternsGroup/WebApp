@@ -7,7 +7,7 @@
 
 <h2>ReturnBook</h2>
 
-@using (Html.BeginForm("ReturnBook", "Lend", FormMethod.Post))
+@using (Html.BeginForm("UpdateReturnBook", "Lend", FormMethod.Post))
 {
 <div class="form-group">
     <label>Action Id</label>
@@ -29,9 +29,10 @@
     @Html.TextBoxFor(action => action.RETURNDATE, "{0: dd.MM.yyyy}", new { @class = "form-control", @readonly = "readonly" })
     <br />
     <label>Actual Return Date</label>
-    <input type="text" class="form-control" name="RETURNDATE" readonly="readonly" value=@DateTime.Now.ToString("dd/MM/yyyy") >
+    <input type="text" class="form-control" name="MEMBERRETURNDATE" readonly="readonly" value=@DateTime.Now.ToString("dd/MM/yyyy") >
     
     <div>
+        <!--burada bir sorun var mı? update return book'a geldi dbyi doldurdu yaptı-->
         <button  id="defaultBtn" style="background-color:darkseagreen; color:black; margin-top:15px" class="btn btn-info">Return Book</button>
     </div>
  </div>

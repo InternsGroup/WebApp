@@ -49,6 +49,17 @@ namespace LibraryManagementSystem.Controllers
             return View("ReturnBook", lendObj);
         }
 
-       
+       public ActionResult UpdateReturnBook(ACTION_TABLE actionTableObj)
+        {
+            var actionObj = db.ACTION_TABLE.Find(actionTableObj.ID);
+            actionObj.MEMBERRETURNDATE = actionTableObj.MEMBERRETURNDATE;
+            actionObj.ACTIONSTATUS = true;
+            actionObj.BOOK_TABLE.STATUS = true;
+
+            //geri verilecek kitaplar listesinden kaldır
+            db.ACTION_TABLE.Remove(actionObj);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
