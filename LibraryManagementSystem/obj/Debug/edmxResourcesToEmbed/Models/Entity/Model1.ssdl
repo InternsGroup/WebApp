@@ -7,9 +7,11 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="BOOK" Type="int" />
     <Property Name="MEMBER" Type="int" />
-    <Property Name="EMPLOYEE" Type="int" />
+    <Property Name="EMPLOYEE" Type="tinyint" />
     <Property Name="BORROWDATE" Type="smalldatetime" />
     <Property Name="RETURNDATE" Type="smalldatetime" />
+    <Property Name="MEMBERRETURNDATE" Type="smalldatetime" />
+    <Property Name="ACTIONSTATUS" Type="bit" />
   </EntityType>
   <EntityType Name="AUTHOR_TABLE">
     <Key>
@@ -30,7 +32,7 @@
     <Property Name="AUTHOR" Type="int" />
     <Property Name="PRINTDATE" Type="char" MaxLength="4" />
     <Property Name="PUBLISHER" Type="varchar" MaxLength="50" />
-    <Property Name="PAGE" Type="varchar" MaxLength="4" />
+    <Property Name="PAGE" Type="varchar" MaxLength="4" Nullable="false" />
     <Property Name="STATUS" Type="bit" />
   </EntityType>
   <EntityType Name="CASHBOX_TABLE">
@@ -46,7 +48,7 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="NAME" Type="varchar" MaxLength="20" />
+    <Property Name="NAME" Type="varchar" MaxLength="25" />
   </EntityType>
   <EntityType Name="EMPLOYEE_TABLE">
     <Key>
@@ -60,8 +62,8 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="NAME" Type="varchar" MaxLength="20" />
-    <Property Name="SURNAME" Type="varchar" MaxLength="20" />
+    <Property Name="NAME" Type="varchar" MaxLength="30" />
+    <Property Name="SURNAME" Type="varchar" MaxLength="30" />
     <Property Name="EMAIL" Type="varchar" MaxLength="50" />
     <Property Name="USERNAME" Type="varchar" MaxLength="20" />
     <Property Name="PASSWORD" Type="varchar" MaxLength="20" />
@@ -99,6 +101,18 @@
       </Principal>
       <Dependent Role="ACTION_TABLE">
         <PropertyRef Name="BOOK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ACTION_TABLE_EMPLOYEE_TABLE">
+    <End Role="EMPLOYEE_TABLE" Type="Self.EMPLOYEE_TABLE" Multiplicity="0..1" />
+    <End Role="ACTION_TABLE" Type="Self.ACTION_TABLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLOYEE_TABLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ACTION_TABLE">
+        <PropertyRef Name="EMPLOYEE" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -174,6 +188,10 @@
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_ACTION_TABLE_BOOK_TABLE" Association="Self.FK_ACTION_TABLE_BOOK_TABLE">
       <End Role="BOOK_TABLE" EntitySet="BOOK_TABLE" />
+      <End Role="ACTION_TABLE" EntitySet="ACTION_TABLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ACTION_TABLE_EMPLOYEE_TABLE" Association="Self.FK_ACTION_TABLE_EMPLOYEE_TABLE">
+      <End Role="EMPLOYEE_TABLE" EntitySet="EMPLOYEE_TABLE" />
       <End Role="ACTION_TABLE" EntitySet="ACTION_TABLE" />
     </AssociationSet>
     <AssociationSet Name="FK_ACTION_TABLE_MEMBER_TABLE" Association="Self.FK_ACTION_TABLE_MEMBER_TABLE">

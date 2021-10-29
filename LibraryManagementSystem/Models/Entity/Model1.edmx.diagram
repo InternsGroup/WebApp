@@ -10,7 +10,7 @@
         <EntityTypeShape EntityType="DB_LIBRARYModel.BOOK_TABLE" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_LIBRARYModel.CASHBOX_TABLE" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_LIBRARYModel.CATEGORY_TABLE" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_LIBRARYModel.EMPLOYEE_TABLE" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_LIBRARYModel.EMPLOYEE_TABLE" Width="1.5" PointX="8.5" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_LIBRARYModel.MEMBER_TABLE" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_LIBRARYModel.PENALTY_TABLE" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_LIBRARYModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
@@ -20,6 +20,7 @@
         <AssociationConnector Association="DB_LIBRARYModel.FK_BOOK_TABLE_AUTHOR_TABLE" ManuallyRouted="false" />
         <AssociationConnector Association="DB_LIBRARYModel.FK_BOOK_TABLE_CATEGORY_TABLE" ManuallyRouted="false" />
         <AssociationConnector Association="DB_LIBRARYModel.FK_PENALTY_TABLE_MEMBER_TABLE" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_LIBRARYModel.FK_ACTION_TABLE_EMPLOYEE_TABLE" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

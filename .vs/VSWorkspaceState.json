@@ -2,8 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\LibraryManagementSystem",
-    "\\LibraryManagementSystem\\Views"
+    "\\LibraryManagementSystem\\Controllers",
+    "\\LibraryManagementSystem\\Views",
+    "\\LibraryManagementSystem\\Views\\Author",
+    "\\LibraryManagementSystem\\Views\\Book",
+    "\\LibraryManagementSystem\\Views\\Employee",
+    "\\LibraryManagementSystem\\Views\\Lend"
   ],
-  "SelectedNode": "\\LibraryManagementSystem\\Views\\Member",
+  "SelectedNode": "\\LibraryManagementSystem\\Views\\Author\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

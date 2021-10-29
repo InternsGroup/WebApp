@@ -1,0 +1,47 @@
+﻿@using LibraryManagementSystem.Models.Entity;
+@model List<ACTION_TABLE>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>List of Loaned Books</h2>
+
+
+
+<div>
+    <h2 id="tableTitle" style="background-color:gray;">Books</h2>
+</div>
+
+
+<table style="position:center; background-color: black; table-layout: auto;">
+    <tr>
+        <th style="background-color:lightgray;">Transaction Id</th>
+        <th style="background-color:lightgray;">Book Name</th>
+        <th style="background-color:lightgray;">Member Name</th>
+        <th style="background-color:lightgray;">Employee ID</th>
+        <th style="background-color:lightgray;">Lend Date</th>
+        <th style="background-color:lightgray;">Return Date</th>
+        <th style="background-color:lightgray;">Return</th>
+    </tr>
+    @foreach (var action in Model)
+    {
+        <tr>
+            <td style="background-color: lightgray;">@action.ID</td>
+            <td style="background-color: lightgray;">@action.BOOK_TABLE.NAME</td>
+            <td style="background-color: lightgray;">@action.MEMBER_TABLE.NAME</td>
+            <td style="background-color: lightgray;">@action.EMPLOYEE </td>
+            <td style="background-color: lightgray;">@Convert.ToDateTime(action.BORROWDATE).ToString("dd/MM/yy") </td>
+            <td style="background-color: lightgray;">@Convert.ToDateTime(action.RETURNDATE).ToString("dd/MM/yy")</td>
+            <td style="background-color: lightgray;"><a href="/Lend/ReturnBook/@action.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Return Book</a></td>
+        </tr>
+    }
+</table>
+
+@if (Model.Count() == 0)
+{
+    <div class="alert alert-danger" role="alert" style="width:50%;text-align:center;margin:auto">
+        <b>No books found.</b>
+    </div>
+}

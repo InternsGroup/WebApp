@@ -4,6 +4,8 @@
     <EntitySetMapping Name="ACTION_TABLE">
       <EntityTypeMapping TypeName="DB_LIBRARYModel.ACTION_TABLE">
         <MappingFragment StoreEntitySet="ACTION_TABLE">
+          <ScalarProperty Name="MEMBERRETURNDATE" ColumnName="MEMBERRETURNDATE" />
+          <ScalarProperty Name="ACTIONSTATUS" ColumnName="ACTIONSTATUS" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="BOOK" ColumnName="BOOK" />
           <ScalarProperty Name="MEMBER" ColumnName="MEMBER" />
