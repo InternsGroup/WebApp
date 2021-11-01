@@ -34,6 +34,7 @@
     <Property Name="PUBLISHER" Type="varchar" MaxLength="50" />
     <Property Name="PAGE" Type="varchar" MaxLength="4" Nullable="false" />
     <Property Name="STATUS" Type="bit" />
+    <Property Name="BOOKIMAGE" Type="varchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="CASHBOX_TABLE">
     <Key>
@@ -49,6 +50,16 @@
     </Key>
     <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NAME" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="CONTACT_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="TOPIC" Type="varchar" MaxLength="50" />
+    <Property Name="MESSAGE" Type="varchar" MaxLength="1000" />
   </EntityType>
   <EntityType Name="EMPLOYEE_TABLE">
     <Key>
@@ -182,6 +193,7 @@
     <EntitySet Name="BOOK_TABLE" EntityType="Self.BOOK_TABLE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CASHBOX_TABLE" EntityType="Self.CASHBOX_TABLE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CATEGORY_TABLE" EntityType="Self.CATEGORY_TABLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTACT_TABLE" EntityType="Self.CONTACT_TABLE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EMPLOYEE_TABLE" EntityType="Self.EMPLOYEE_TABLE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MEMBER_TABLE" EntityType="Self.MEMBER_TABLE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PENALTY_TABLE" EntityType="Self.PENALTY_TABLE" Schema="dbo" store:Type="Tables" />

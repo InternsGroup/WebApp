@@ -21,6 +21,7 @@
         <AssociationConnector Association="DB_LIBRARYModel.FK_BOOK_TABLE_CATEGORY_TABLE" ManuallyRouted="false" />
         <AssociationConnector Association="DB_LIBRARYModel.FK_PENALTY_TABLE_MEMBER_TABLE" ManuallyRouted="false" />
         <AssociationConnector Association="DB_LIBRARYModel.FK_ACTION_TABLE_EMPLOYEE_TABLE" />
+        <EntityTypeShape EntityType="DB_LIBRARYModel.CONTACT_TABLE" Width="1.5" PointX="9.625" PointY="6.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

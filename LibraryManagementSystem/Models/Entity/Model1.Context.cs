@@ -34,5 +34,6 @@ namespace LibraryManagementSystem.Models.Entity
         public virtual DbSet<MEMBER_TABLE> MEMBER_TABLE { get; set; }
         public virtual DbSet<PENALTY_TABLE> PENALTY_TABLE { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<CONTACT_TABLE> CONTACT_TABLE { get; set; }
     }
 }

@@ -9,6 +9,6 @@
     "\\LibraryManagementSystem\\Views\\Employee",
     "\\LibraryManagementSystem\\Views\\Lend"
   ],
-  "SelectedNode": "\\LibraryManagementSystem\\LibraryManagementSystem.sln",
+  "SelectedNode": "\\LibraryManagementSystem\\Views\\Book\\AddBook.cshtml",
   "PreviewInSolutionExplorer": false
 }

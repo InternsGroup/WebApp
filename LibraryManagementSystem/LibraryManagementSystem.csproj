@@ -157,6 +157,9 @@
     <Compile Include="Models\Entity\CATEGORY_TABLE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\CONTACT_TABLE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\EMPLOYEE_TABLE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

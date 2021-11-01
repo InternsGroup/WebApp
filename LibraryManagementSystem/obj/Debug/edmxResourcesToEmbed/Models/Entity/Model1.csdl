@@ -42,6 +42,7 @@
     <NavigationProperty Name="ACTION_TABLE" Relationship="Self.FK_ACTION_TABLE_BOOK_TABLE" FromRole="BOOK_TABLE" ToRole="ACTION_TABLE" />
     <NavigationProperty Name="AUTHOR_TABLE" Relationship="Self.FK_BOOK_TABLE_AUTHOR_TABLE" FromRole="BOOK_TABLE" ToRole="AUTHOR_TABLE" />
     <NavigationProperty Name="CATEGORY_TABLE" Relationship="Self.FK_BOOK_TABLE_CATEGORY_TABLE" FromRole="BOOK_TABLE" ToRole="CATEGORY_TABLE" />
+    <Property Name="BOOKIMAGE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="CASHBOX_TABLE">
     <Key>
@@ -216,6 +217,7 @@
       <End Role="EMPLOYEE_TABLE" EntitySet="EMPLOYEE_TABLE" />
       <End Role="ACTION_TABLE" EntitySet="ACTION_TABLE" />
     </AssociationSet>
+    <EntitySet Name="CONTACT_TABLE" EntityType="DB_LIBRARYModel.CONTACT_TABLE" />
   </EntityContainer>
   <Association Name="FK_ACTION_TABLE_EMPLOYEE_TABLE">
     <End Type="DB_LIBRARYModel.EMPLOYEE_TABLE" Role="EMPLOYEE_TABLE" Multiplicity="0..1" />
@@ -229,4 +231,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="CONTACT_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TOPIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MESSAGE" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>
