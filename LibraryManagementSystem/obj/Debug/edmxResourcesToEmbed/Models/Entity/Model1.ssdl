@@ -34,6 +34,7 @@
     <Property Name="PUBLISHER" Type="varchar" MaxLength="50" />
     <Property Name="PAGE" Type="varchar" MaxLength="4" Nullable="false" />
     <Property Name="STATUS" Type="bit" />
+    <Property Name="BOOKIMAGE" Type="varchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="CASHBOX_TABLE">
     <Key>

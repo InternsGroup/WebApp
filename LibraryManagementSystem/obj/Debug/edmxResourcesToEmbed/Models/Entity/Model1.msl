@@ -28,6 +28,7 @@
     <EntitySetMapping Name="BOOK_TABLE">
       <EntityTypeMapping TypeName="DB_LIBRARYModel.BOOK_TABLE">
         <MappingFragment StoreEntitySet="BOOK_TABLE">
+          <ScalarProperty Name="BOOKIMAGE" ColumnName="BOOKIMAGE" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="NAME" ColumnName="NAME" />
           <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
