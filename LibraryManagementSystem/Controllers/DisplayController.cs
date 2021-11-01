@@ -10,12 +10,22 @@ namespace LibraryManagementSystem.Controllers
     public class DisplayController : Controller
     {
         DB_LIBRARYEntities db = new DB_LIBRARYEntities();
-        // GET: Display
+        
+        [HttpGet]
         public ActionResult Index()
         {
             var books = db.BOOK_TABLE.ToList();
 
             return View(books);
+        }
+
+       
+        [HttpPost]
+        public ActionResult Index(CONTACT_TABLE contactTableObj)
+        {
+            db.CONTACT_TABLE.Add(contactTableObj);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
