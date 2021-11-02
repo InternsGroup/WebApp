@@ -250,6 +250,9 @@
     <Content Include="web2\resimler\book4.jpg" />
     <Content Include="web2\resimler\book5.jpg" />
     <Content Include="web2\resimler\img1.jpg" />
+    <Content Include="web2\resimler\k2.jpg" />
+    <Content Include="web2\resimler\k4.jpg" />
+    <Content Include="web2\resimler\k5.jpg" />
     <Content Include="web2\w3layouts-License.txt" />
     <Content Include="web\.gitignore" />
     <Content Include="web\css\freelancer.css" />
