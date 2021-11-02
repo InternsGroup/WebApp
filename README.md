@@ -55,3 +55,11 @@ Kategori tablosu güzelleştirildi.
 * Display Window bölümü tamamlandı.
 * Book Tablosuna BOOKIMAGE kolonu eklendi varchar(250).
 * Hızlıresim.com'a resimler eklenerek linkleri <img source=""> kısmına yazılarak websitemizde görüntülenmesi sağlandı.
+
+# # 02.11.2021
+
+* Dashboard bölümü tamamlandı.
+* Statistics bölümü yaratıldı ve kullanıcıi kitap sayısı gibi özellikler db'den çekilerek eklendi.
+* Boş bir chart eklendi ileride kullanılabilir.
+* Anasayfa'ya photo slides eklendi fakat css'leri çakışıyor.
+
