@@ -15,7 +15,6 @@ namespace LibraryManagementSystem.Controllers
         public ActionResult Index()
         {
             var books = db.BOOK_TABLE.ToList();
-
             return View(books);
         }
 
