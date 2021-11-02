@@ -28,16 +28,35 @@ namespace LibraryManagementSystem.Controllers
         {
             db.ACTION_TABLE.Add(lendObj);
             var bookObj = db.BOOK_TABLE.Find(lendObj.BOOK);
-            if (bookObj.STATUS == false)
+            var memberObj = db.MEMBER_TABLE.Find(lendObj.MEMBER);
+            var employeeObj = db.EMPLOYEE_TABLE.Find(lendObj.EMPLOYEE);
+            
+            if (bookObj == null)
             {
-                //hata verdir kitap zaten birinde alamazsın diye
+                ViewBag.Message = "Enter valid book ID.";
+                return View("Lend");
+            }
+            else if (bookObj.STATUS == false)
+            {
+                ViewBag.Message = "Book is already loaned to another member.";
+                return View("Lend");
+            }
+            else if (memberObj == null)
+            {
+                ViewBag.Message = "Enter valid member ID.";
+                return View("Lend");
+            }
+            else if (employeeObj == null)
+            {
+                ViewBag.Message = "Enter valid employee ID.";
+                return View("Lend");
             }
             else
             {
                 bookObj.STATUS = false;
                 db.SaveChanges();
             }
-            
+
             return RedirectToAction("Index");
         }
 
@@ -45,11 +64,11 @@ namespace LibraryManagementSystem.Controllers
         {
             var lendObj = db.ACTION_TABLE.Find(id);
             lendObj.BOOK_TABLE.STATUS = true;
-            
+
             return View("ReturnBook", lendObj);
         }
 
-       public ActionResult UpdateReturnBook(ACTION_TABLE actionTableObj)
+        public ActionResult UpdateReturnBook(ACTION_TABLE actionTableObj)
         {
             var actionObj = db.ACTION_TABLE.Find(actionTableObj.ID);
             actionObj.MEMBERRETURNDATE = actionTableObj.MEMBERRETURNDATE;

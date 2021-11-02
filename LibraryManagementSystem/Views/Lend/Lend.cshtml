@@ -4,6 +4,9 @@
     ViewBag.Title = "Lend";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
+<head>
+    <title>Lend Book</title>
+</head>
 
 <h2>Lend</h2>
 <form class="form-group" method="post" style="margin-top:20px; text-decoration:double">
@@ -32,3 +35,10 @@
         <button class="btn btn-group" style="background-color: darkseagreen; margin-bottom: 15px; color:black">Lend Book</button>
     </div>
 </form>
+
+@if (@ViewBag.Message != null)
+{
+    <div class="alert alert-danger" role="alert" style="width:50%;text-align:center;margin:auto">
+        @ViewBag.Message
+    </div>
+}

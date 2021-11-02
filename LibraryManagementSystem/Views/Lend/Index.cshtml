@@ -5,15 +5,15 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
+<head>
+    <title>Loaned Books</title>
+</head>
 
 <h2>List of Loaned Books</h2>
-
-
 
 <div>
     <h2 id="tableTitle" style="background-color:gray;">Books</h2>
 </div>
-
 
 <table style="position:center; background-color: black; table-layout: auto;">
     <tr>
@@ -38,7 +38,7 @@
         </tr>
     }
 </table>
-
+<br />
 @if (Model.Count() == 0)
 {
     <div class="alert alert-danger" role="alert" style="width:50%;text-align:center;margin:auto">
