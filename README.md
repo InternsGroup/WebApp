@@ -49,3 +49,9 @@ Kategori tablosu güzelleştirildi.
 * Chat kısmını eklemek için işimize yarayabilecek linkler 
    ** https://pusher.com/tutorials/chat-aspnet/
 * Artık en güncel branch main (merge'ledim) ona ekstra branch açılarak çalışılabilinir.
+
+# # 01.11.2021
+
+* Display Window bölümü tamamlandı.
+* Book Tablosuna BOOKIMAGE kolonu eklendi varchar(250).
+* Hızlıresim.com'a resimler eklenerek linkleri <img source=""> kısmına yazılarak websitemizde görüntülenmesi sağlandı.
