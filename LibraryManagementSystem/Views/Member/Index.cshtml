@@ -22,7 +22,6 @@
         <th style="background-color:lightgray;">Username</th>
         <th style="background-color:lightgray;">Password</th>
         <th style="background-color:lightgray;">Phone Number</th>
-        <th style="background-color:lightgray;">School</th>
         <th style="background-color:lightgray;">Delete</th>
         <th style="background-color:lightgray;">Update</th>
     </tr>
@@ -37,7 +36,6 @@
             <td style="background-color: lightgray;">@member.USERNAME</td>
             <td style="background-color: lightgray;">@member.PASSWORD</td>
             <td style="background-color: lightgray;">@member.TELNUMBER</td>
-            <td style="background-color: lightgray;">@member.SCHOOL</td>
             <td style="background-color: lightgray;"><a href="/Member/DeleteMember/@member.ID" class="btn btn-danger" onclick="return confirm(' Are you sure you want to delete Employee:\n @member.NAME @member.SURNAME')" style="background-color:darkred">Delete</a></td>
             <td style="background-color: lightgray;"><a href="/Member/GetMember/@member.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
         </tr>
