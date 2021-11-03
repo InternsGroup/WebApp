@@ -139,6 +139,7 @@
     <Compile Include="Controllers\LendController.cs" />
     <Compile Include="Controllers\LogInController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Controllers\PanelController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -212,6 +213,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="panelweb\assets\favicon.ico" />
+    <Content Include="panelweb\css\styles.css" />
+    <Content Include="panelweb\index.html" />
+    <Content Include="panelweb\js\scripts.js" />
     <Content Include="web2\css\bootstrap.css" />
     <Content Include="web2\css\clndr.css" />
     <Content Include="web2\css\jqvmap.css" />
@@ -444,6 +449,8 @@
     <Content Include="webregister\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\LogIn\Index.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutPanel.cshtml" />
+    <Content Include="Views\Panel\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
