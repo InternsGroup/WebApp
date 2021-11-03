@@ -10,23 +10,23 @@
 </head>
 
 <div>
-    <h2 id="tableTitle" style="background-color:gray;">Categories</h2>
+    <h2 id="tableTitle" style="background-color:lightyellow;">Categories</h2>
 </div>
 
-<table style="position:center; background-color: black">
+<table class="table table-striped" style="position:center; background-color: lightgray">
     <tr>
-        <th style="background-color:lightgray;">Category Id</th>
-        <th style="background-color:lightgray;">Category Name</th>
-        <th style="background-color:lightgray;">Delete Category</th>
-        <th style="background-color:lightgray;">Update Category</th>
+        <th >Category Id</th>
+        <th >Category Name</th>
+        <th >Delete Category</th>
+        <th >Update Category</th>
     </tr>
     @foreach (var category in Model)
     {
         <tr>
-            <td style="background-color: lightgray;">@category.ID</td>
-            <td style="background-color: lightgray;">@category.NAME</td>
-            <td style="background-color: lightgray;"><a href="/Category/DeleteCategory/@category.ID" class="btn btn-danger" onclick="return confirm(' Are you sure you want to delete Category:\n @category.NAME')" style="background-color:darkred">Delete</a></td>
-            <td style="background-color: lightgray;"><a href="/Category/GetCategory/@category.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
+            <td >@category.ID</td>
+            <td >@category.NAME</td>
+            <td ><a href="/Category/DeleteCategory/@category.ID" class="btn btn-danger" onclick="return confirm(' Are you sure you want to delete Category:\n @category.NAME')" style="background-color:darkred">Delete</a></td>
+            <td ><a href="/Category/GetCategory/@category.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
         </tr>
     }
 </table>

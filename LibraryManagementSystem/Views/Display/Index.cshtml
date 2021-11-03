@@ -40,6 +40,12 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="~/Register/Index">Register</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="~/LogIn/Index">LogIn</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="~/Book/Index">Books</a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1">
@@ -58,7 +64,7 @@
         <div class="container d-flex align-items-center flex-column">
 
             <!-- Masthead Avatar Image -->
-            <img class="masthead-avatar mb-5" src="~/web/img/library.jpg"  alt="">
+            <img class="masthead-avatar mb-5" src="~/web/img/library.jpg" alt="">
 
             <!-- Masthead Heading -->
             <h1 class="masthead-heading text-uppercase mb-0">Welcome to our Library!</h1>
@@ -119,6 +125,81 @@
         </div>
     </section>
 
+    <!--Library Photos from TAU-->
+
+    
+    <section class="page-section portfolio" id="portfolio">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Library Photos</h2>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <div class="container">
+            <!-- Icon Divider -->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:1000px; height:600px;">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+
+                    <div class="item active">
+
+                        <img src="~/web2/resimler/k2.jpg" />
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="~/web2/resimler/k4.jpg" />
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="~/web2/resimler/k5.jpg" />
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Custom fonts for this theme -->
+    <link href="~/web/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="~/web/css/freelancer.min.css" rel="stylesheet">
+
+
     <!-- About Section -->
     <section class="page-section bg-primary text-white mb-0" id="about">
         <div class="container">
@@ -146,7 +227,7 @@
                 <div class="col-lg-4 mr-auto">
                     <p class="lead">Barış Köse 3rd year Computer Engineering Student. He likes to spend time in databases.</p>
                 </div>
-               
+
             </div>
 
         </div>
@@ -254,7 +335,7 @@
                     <h4 class="text-uppercase mb-4">About Creators</h4>
                     <p class="lead mb-0">
                         We are a Project team from INF303 - Software Engineering Project.
-                        
+
                     </p>
                 </div>
 

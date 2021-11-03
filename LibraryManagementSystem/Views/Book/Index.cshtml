@@ -21,36 +21,36 @@
 }
 
 <div>
-    <h2 id="tableTitle" style="background-color:gray;">Books</h2>
+    <h2 id="tableTitle" style="background-color:lightyellow;">Books</h2>
 </div>
 
 
-<table style="position:center; background-color: black; table-layout: auto;">
-    <tr>
-        <th style="background-color:lightgray;">Book Id</th>
-        <th style="background-color:lightgray;">Book Name</th>
-        <th style="background-color:lightgray;">Book Category</th>
-        <th style="background-color:lightgray;">Book Author</th>
-        <th style="background-color:lightgray;">Print Date</th>
-        <th style="background-color:lightgray;">Publisher</th>
-        <th style="background-color:lightgray;">Page</th>
-        <th style="background-color:lightgray;">Status</th>
-        <th style="background-color:lightgray;">Delete</th>
-        <th style="background-color:lightgray;">Update</th>
+<table class="table table-striped;" style="position:center; background-color: lightgray; table-layout: auto;">
+    <tr style="background-color:gold">
+        <th >Book Id</th>
+        <th>Book Name</th>
+        <th >Book Category</th>
+        <th >Book Author</th>
+        <th >Print Date</th>
+        <th >Publisher</th>
+        <th >Page</th>
+        <th >Status</th>
+        <th >Delete</th>
+        <th >Update</th>
     </tr>
     @foreach (var book in Model)
     {
         <tr>
-            <td style="background-color: lightgray;">@book.ID</td>
-            <td style="background-color: lightgray;" id="tableDataOverFlow">@book.NAME</td>
-            <td style="background-color: lightgray;">@book.CATEGORY_TABLE.NAME</td>
-            <td style="background-color: lightgray;">@book.AUTHOR_TABLE.NAME&nbsp;@book.AUTHOR_TABLE.SURNAME </td>
-            <td style="background-color: lightgray;">@book.PRINTDATE</td>
-            <td style="background-color: lightgray;" id="tableDataOverFlow">@book.PUBLISHER</td>
-            <td style="background-color: lightgray;">@book.PAGE</td>
-            <td style="background-color: lightgray;">@book.STATUS</td>
-            <td style="background-color: lightgray;"><a href="/Book/DeleteBook/@book.ID" class="btn btn-danger " style="background-color:darkred" onclick="return confirm(' Are you sure you want to delete Book:\n @book.NAME')">Delete</a></td>
-            <td style="background-color: lightgray;"><a href="/Book/GetBook/@book.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
+            <td >@book.ID</td>
+            <td  id="tableDataOverFlow">@book.NAME</td>
+            <td >@book.CATEGORY_TABLE.NAME</td>
+            <td >@book.AUTHOR_TABLE.NAME&nbsp;@book.AUTHOR_TABLE.SURNAME </td>
+            <td >@book.PRINTDATE</td>
+            <td  id="tableDataOverFlow">@book.PUBLISHER</td>
+            <td >@book.PAGE</td>
+            <td >@book.STATUS</td>
+            <td ><a href="/Book/DeleteBook/@book.ID" class="btn btn-danger " style="background-color:darkred" onclick="return confirm(' Are you sure you want to delete Book:\n @book.NAME')">Delete</a></td>
+            <td ><a href="/Book/GetBook/@book.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
         </tr>
     }
 </table>

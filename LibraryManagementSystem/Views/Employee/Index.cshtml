@@ -9,14 +9,14 @@
 </head>
 
 <div>
-    <h2 id="tableTitle" style="background-color:gray;">Employees</h2>
+    <h2 id="tableTitle" style="background-color:lightyellow;">Employees</h2>
 </div>
-<table style="position: center; background-color: black; table-layout: auto;">
+<table class="table table-striped;" style="position: center; background-color: lightgray; table-layout: auto;">
     <tr>
-        <th style="background-color:lightgray;">Employee Id</th>
-        <th style="background-color:lightgray;">Employee Name</th>
-        <th style="background-color:lightgray;">Delete Employee</th>
-        <th style="background-color:lightgray;">Update Employee</th>
+        <th >Employee Id</th>
+        <th >Employee Name</th>
+        <th >Delete Employee</th>
+        <th >Update Employee</th>
     </tr>
 
     @foreach (var employee in Model)

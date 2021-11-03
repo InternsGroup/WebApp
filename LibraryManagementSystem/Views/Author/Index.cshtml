@@ -8,27 +8,27 @@
 </head>
 
 <div>
-    <h2 id="tableTitle" style="background-color:gray;">Authors</h2>
+    <h2 id="tableTitle" style="background-color:lightyellow;">Authors</h2>
 </div>
 
-<table style="position:center; background-color: black; table-layout: auto;">
-    <tr>
-        <th style="background-color:lightgray;">Author Id</th>
-        <th style="background-color:lightgray;">Author Name</th>
-        <th style="background-color:lightgray;">Author Surname</th>
-        <th style="background-color:lightgray;">Author Detail</th>
-        <th style="background-color:lightgray;">Delete Author</th>
-        <th style="background-color:lightgray;">Update Author</th>
+<table class ="table table-striped;" style="position:center; table-layout: auto; background-color:lightgray;">
+    <tr style="background-color:greenyellow;">
+        <th >Author Id</th>
+        <th >Author Name</th>
+        <th >Author Surname</th>
+        <th >Author Detail</th>
+        <th >Delete Author</th>
+        <th >Update Author</th>
     </tr>
     @foreach (var author in Model)
     {
         <tr>
-            <td style="background-color: lightgray;">@author.ID</td>
-            <td style="background-color: lightgray;">@author.NAME</td>
-            <td style="background-color: lightgray;">@author.SURNAME</td>
-            <td style="background-color: lightgray;" id="tableDataOverFlow">@author.DETAIL</td>
-            <td style="background-color: lightgray;"><a href="/Author/DeleteAuthor/@author.ID" class="btn btn-danger " style="background-color:darkred" onclick="return confirm(' Are you sure you want to delete Author:\n @author.NAME @author.SURNAME')">Delete</a></td>
-            <td style="background-color: lightgray;"><a href="/Author/GetAuthor/@author.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
+            <td >@author.ID</td>
+            <td >@author.NAME</td>
+            <td >@author.SURNAME</td>
+            <td  id="tableDataOverFlow">@author.DETAIL</td>
+            <td ><a href="/Author/DeleteAuthor/@author.ID" class="btn btn-danger " style="background-color:darkred" onclick="return confirm(' Are you sure you want to delete Author:\n @author.NAME @author.SURNAME')">Delete</a></td>
+            <td ><a href="/Author/GetAuthor/@author.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
         </tr>
     }
 </table>
