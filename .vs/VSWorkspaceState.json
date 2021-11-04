@@ -6,8 +6,9 @@
     "\\LibraryManagementSystem\\Models\\Entity",
     "\\LibraryManagementSystem\\Views",
     "\\LibraryManagementSystem\\Views\\Author",
-    "\\LibraryManagementSystem\\Views\\Book"
+    "\\LibraryManagementSystem\\Views\\Book",
+    "\\LibraryManagementSystem\\Views\\Panel"
   ],
-  "SelectedNode": "\\LibraryManagementSystem\\Views\\Author\\Index.cshtml",
+  "SelectedNode": "\\LibraryManagementSystem\\Models\\Entity\\Model1.edmx",
   "PreviewInSolutionExplorer": false
 }

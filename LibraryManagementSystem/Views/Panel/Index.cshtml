@@ -10,11 +10,11 @@
     </div>
 }
 
-<h2>User Panel</h2>
+<h3>User Panel</h3>
 
 @using (Html.BeginForm("Index", "Panel", FormMethod.Post, new { @autocomplete = "off"}))
 {
-    <table class="table table-bordered table-info" style="table-layout:fixed">
+    <table class="table table-bordered" style="table-layout: fixed; background-color: rgb(242,242,242) ">
         <tr>
             <td>
                 <b>Member ID:</b>
@@ -70,7 +70,7 @@
             </td>
         </tr>
     </table>
-    <button class="btn btn-warning">Update info</button>
+    <button class="btn btn-warning">Update Info</button>
 }
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
 <script src="~/Scripts/input.js"></script>
