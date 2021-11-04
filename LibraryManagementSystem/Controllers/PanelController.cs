@@ -29,6 +29,8 @@ namespace LibraryManagementSystem.Controllers
             member.SURNAME = memberObj.SURNAME;
             member.PASSWORD = memberObj.PASSWORD;
             member.PHOTO = memberObj.PHOTO;
+            member.TELNUMBER = memberObj.TELNUMBER;
+            member.SCHOOL = memberObj.SCHOOL;
             ViewBag.Message = "Info successfully updated.";
             db.SaveChanges();
             return View(member);
