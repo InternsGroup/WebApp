@@ -139,6 +139,7 @@
     <Compile Include="Controllers\LendController.cs" />
     <Compile Include="Controllers\LogInController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\PanelController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
@@ -449,6 +450,7 @@
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutPanel.cshtml" />
     <Content Include="Views\Panel\Index.cshtml" />
+    <Content Include="Views\Message\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

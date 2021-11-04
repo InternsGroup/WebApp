@@ -39,6 +39,7 @@ namespace LibraryManagementSystem.Controllers
             }
             else
             {
+                //şifre yanlıs falan diyebilir
                 return View();
             }
         }
