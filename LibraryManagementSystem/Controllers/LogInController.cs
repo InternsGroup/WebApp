@@ -8,7 +8,7 @@ using System.Web.Security;
 
 namespace LibraryManagementSystem.Controllers
 {
-     
+
 
     public class LogInController : Controller
     {
@@ -25,13 +25,22 @@ namespace LibraryManagementSystem.Controllers
         {
             var username = memberObj.USERNAME;
             var password = memberObj.PASSWORD;
-            var userExist = db.MEMBER_TABLE.First(x => x.PASSWORD == password &&  x.USERNAME == username);
-            if(userExist != null)
+            var userInfo = db.MEMBER_TABLE.FirstOrDefault(x => x.PASSWORD == password && x.USERNAME == username);
+            if (userInfo != null)
             {
-               
+                FormsAuthentication.SetAuthCookie(userInfo.USERNAME, false);
+                Session["Username"] = userInfo.USERNAME.ToString();
+                //Session["Email"] = userInfo.EMAIL.ToString();
+                //TempData["Id"] = userInfo.ID.ToString();
+                //TempData["Name"] = userInfo.NAME.ToString();
+                //TempData["Surname"] = userInfo.SURNAME.ToString();
+                //TempData["Password"] = userInfo.PASSWORD.ToString();
+                return RedirectToAction("Index", "Panel");
             }
-
-            return View("/Panel/Index");
+            else
+            {
+                return View();
+            }
         }
     }
 }

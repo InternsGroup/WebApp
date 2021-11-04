@@ -4,8 +4,10 @@
     "\\LibraryManagementSystem",
     "\\LibraryManagementSystem\\Models",
     "\\LibraryManagementSystem\\Models\\Entity",
-    "\\LibraryManagementSystem\\Views"
+    "\\LibraryManagementSystem\\Views",
+    "\\LibraryManagementSystem\\Views\\Author",
+    "\\LibraryManagementSystem\\Views\\Book"
   ],
-  "SelectedNode": "\\LibraryManagementSystem\\Models\\Entity\\Model1.edmx",
+  "SelectedNode": "\\LibraryManagementSystem\\Views\\Author\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

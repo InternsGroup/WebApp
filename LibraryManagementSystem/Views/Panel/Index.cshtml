@@ -1,8 +1,66 @@
-﻿
+﻿@model LibraryManagementSystem.Models.Entity.MEMBER_TABLE
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutPanel.cshtml";
 }
 
-<h2>Index</h2>
+<h2>User Panel</h2>
 
+@using (Html.BeginForm("Index", "Panel", FormMethod.Post))
+{
+<table class="table table-bordered table-info" style="table-layout:fixed">
+    <tr>
+        <td>
+            <b>Member ID:</b>
+        </td>
+        <td>
+            @Html.DisplayFor(x => x.ID)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Email:</b>
+        </td>
+        <td>
+            @Html.DisplayFor(x => x.EMAIL)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Username:</b>
+        </td>
+        <td>
+            @Html.DisplayFor(x => x.USERNAME)
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <b>Name:</b> <input type="text" class="form-control" value="@Html.DisplayFor(x => x.NAME)" name="NAME" onkeypress="return isNumericKey(event)" maxlength="20" placeholder="Name" autocomplete="off" required />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <b>Surname:</b> <input type="text" class="form-control" value="@Html.DisplayFor(x => x.SURNAME)" name="SURNAME" onkeypress="return isNumericKey(event)" maxlength="20" placeholder="Surname" autocomplete="off" required />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <b>Password:</b> <input type="text" class="form-control" value="@Html.DisplayFor(x => x.PASSWORD)" name="PASSWORD" maxlength="20" placeholder="Password" autocomplete="off" required />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <b>Profile Photo:</b> <input type="text" class="form-control" value="@Html.DisplayFor(x => x.PHOTO)" name="PHOTO" maxlength="250" placeholder="Link" autocomplete="off" />
+        </td>
+    </tr>
+</table>
+    <button class="btn btn-warning">Update info</button>
+}
+@if (@ViewBag.Message != null)
+{
+    <div class="alert alert-success" role="alert" style="width:50%;text-align:center;margin:auto">
+        @ViewBag.Message
+    </div>
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/input.js"></script>

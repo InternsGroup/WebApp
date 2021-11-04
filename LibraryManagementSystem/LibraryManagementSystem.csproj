@@ -213,10 +213,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="panelweb\assets\favicon.ico" />
-    <Content Include="panelweb\css\styles.css" />
-    <Content Include="panelweb\index.html" />
-    <Content Include="panelweb\js\scripts.js" />
+    <Content Include="Content\LayoutPanel.css" />
+    <Content Include="Scripts\LayoutPanel.js" />
     <Content Include="web2\css\bootstrap.css" />
     <Content Include="web2\css\clndr.css" />
     <Content Include="web2\css\jqvmap.css" />
