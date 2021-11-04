@@ -12,8 +12,8 @@
 
 # # 10.10.2021
 
-* Kategori bölümü tamamlandı. Kategori ekleme, güncelleme ve silme kısımları ayarlandı. Tasarım düzenlemesi gerekli.\
-* Tedbir amacli categoryPart branch'ı acip oraya yükledim çünkü veri tabanı bağlantısında web.config içerisinde connectionStrings kısmında kalın yazılarla belirtilen yere herkesin kendi server'ının properties'ine bakıp adını kopyalayıp oraya yapıştırması ve öyle bağlanmayı denemesi lazım.\
+* Kategori bölümü tamamlandı. Kategori ekleme, güncelleme ve silme kısımları ayarlandı. Tasarım düzenlemesi gerekli.
+* Tedbir amacli categoryPart branch'ı acip oraya yükledim çünkü veri tabanı bağlantısında web.config içerisinde connectionStrings kısmında kalın yazılarla belirtilen yere herkesin kendi server'ının properties'ine bakıp adını kopyalayıp oraya yapıştırması ve öyle bağlanmayı denemesi lazım.
 !!Database ismi ve tabloları burada paylaştığımız script olmalı farklı bir isim ve tablo yapısında sorun çıkabilir.!!
 
 ### web.config içerisindeki bölüm
@@ -62,4 +62,9 @@ Kategori tablosu güzelleştirildi.
 * Statistics bölümü yaratıldı ve kullanıcıi kitap sayısı gibi özellikler db'den çekilerek eklendi.
 * Boş bir chart eklendi ileride kullanılabilir.
 * Anasayfa'ya photo slides eklendi fakat css'leri çakışıyor.
+
+# # 04.11.2021
+
+* Öğrenci panel bölümü ayarlandı
+* Tasarımı düzenlenebilir
 
