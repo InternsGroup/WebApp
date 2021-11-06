@@ -12,29 +12,29 @@
 <h2>List of Loaned Books</h2>
 
 <div>
-    <h2 id="tableTitle" style="background-color:gray;">Books</h2>
+    <h2 id="tableTitle" style="background-color: lightyellow;">Books</h2>
 </div>
 
-<table style="position:center; background-color: black; table-layout: auto;">
+<table class="table table-striped;" style="position:center; table-layout: auto;">
     <tr>
-        <th style="background-color:lightgray;">Transaction Id</th>
-        <th style="background-color:lightgray;">Book Name</th>
-        <th style="background-color:lightgray;">Member Name</th>
-        <th style="background-color:lightgray;">Employee ID</th>
-        <th style="background-color:lightgray;">Lend Date</th>
-        <th style="background-color:lightgray;">Return Date</th>
-        <th style="background-color:lightgray;">Return</th>
+        <th>Transaction Id</th>
+        <th>Book Name</th>
+        <th>Member Name</th>
+        <th>Employee ID</th>
+        <th>Lend Date</th>
+        <th>Return Date</th>
+        <th>Return</th>
     </tr>
     @foreach (var action in Model)
     {
         <tr>
-            <td style="background-color: lightgray;">@action.ID</td>
-            <td style="background-color: lightgray;">@action.BOOK_TABLE.NAME</td>
-            <td style="background-color: lightgray;">@action.MEMBER_TABLE.NAME</td>
-            <td style="background-color: lightgray;">@action.EMPLOYEE </td>
-            <td style="background-color: lightgray;">@Convert.ToDateTime(action.BORROWDATE).ToString("dd/MM/yy") </td>
-            <td style="background-color: lightgray;">@Convert.ToDateTime(action.RETURNDATE).ToString("dd/MM/yy")</td>
-            <td style="background-color: lightgray;"><a href="/Lend/ReturnBook/@action.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Return Book</a></td>
+            <td>@action.ID</td>
+            <td>@action.BOOK_TABLE.NAME</td>
+            <td>@action.MEMBER_TABLE.NAME</td>
+            <td>@action.EMPLOYEE </td>
+            <td>@Convert.ToDateTime(action.BORROWDATE).ToString("dd/MM/yy") </td>
+            <td>@Convert.ToDateTime(action.RETURNDATE).ToString("dd/MM/yy")</td>
+            <td><a href="/Lend/ReturnBook/@action.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Return Book</a></td>
         </tr>
     }
 </table>

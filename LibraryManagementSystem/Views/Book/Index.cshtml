@@ -27,30 +27,37 @@
 
 <table class="table table-striped;" style="position:center; background-color: lightgray; table-layout: auto;">
     <tr style="background-color:gold">
-        <th >Book Id</th>
+        <th>Book Id</th>
         <th>Book Name</th>
-        <th >Book Category</th>
-        <th >Book Author</th>
-        <th >Print Date</th>
-        <th >Publisher</th>
-        <th >Page</th>
-        <th >Status</th>
-        <th >Delete</th>
-        <th >Update</th>
+        <th>Book Category</th>
+        <th>Book Author</th>
+        <th>Print Date</th>
+        <th>Publisher</th>
+        <th>Page</th>
+        <th>Status</th>
+        <th>Delete</th>
+        <th>Update</th>
     </tr>
     @foreach (var book in Model)
     {
         <tr>
-            <td >@book.ID</td>
-            <td  id="tableDataOverFlow">@book.NAME</td>
-            <td >@book.CATEGORY_TABLE.NAME</td>
-            <td >@book.AUTHOR_TABLE.NAME&nbsp;@book.AUTHOR_TABLE.SURNAME </td>
-            <td >@book.PRINTDATE</td>
-            <td  id="tableDataOverFlow">@book.PUBLISHER</td>
-            <td >@book.PAGE</td>
-            <td >@book.STATUS</td>
-            <td ><a href="/Book/DeleteBook/@book.ID" class="btn btn-danger " style="background-color:darkred" onclick="return confirm(' Are you sure you want to delete Book:\n @book.NAME')">Delete</a></td>
-            <td ><a href="/Book/GetBook/@book.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
+            <td>@book.ID</td>
+            <td id="tableDataOverFlow">@book.NAME</td>
+            <td>@book.CATEGORY_TABLE.NAME</td>
+            <td>@book.AUTHOR_TABLE.NAME&nbsp;@book.AUTHOR_TABLE.SURNAME </td>
+            <td>@book.PRINTDATE</td>
+            <td id="tableDataOverFlow">@book.PUBLISHER</td>
+            <td>@book.PAGE</td>
+            <td>@book.STATUS</td>
+            @if (book.STATUS == false)
+            {
+                <td><a href="/Book/Index" class="btn btn-danger " style="background-color:darkred" onclick="return alert(' This book is actually loaned and can not be deleted:\n @book.NAME')">Delete</a></td>
+            }
+            else
+            {
+                <td><a href="/Book/DeleteBook/@book.ID" class="btn btn-danger " style="background-color:darkred" onclick="return confirm(' Are you sure you want to delete Book:\n @book.NAME')">Delete</a></td>
+            }
+            <td><a href="/Book/GetBook/@book.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
         </tr>
     }
 </table>

@@ -21,7 +21,7 @@ namespace LibraryManagementSystem.Controllers
         {
             db.MEMBER_TABLE.Add(userObj);
             db.SaveChanges();
-            return RedirectToAction("LogIn","Index");
+            return RedirectToAction("Index","LogIn");
         }
     }
 }

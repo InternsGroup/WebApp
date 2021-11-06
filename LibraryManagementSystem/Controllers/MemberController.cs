@@ -29,12 +29,6 @@ namespace LibraryManagementSystem.Controllers
         [HttpPost]
         public ActionResult AddMember(MEMBER_TABLE memberObj)
         {
-            /* Input validation with data annotation
-                if (!ModelState.IsValid)
-                {
-                    return View("AddMember");
-                }   
-            */
             db.MEMBER_TABLE.Add(memberObj);
             db.SaveChanges();
             return RedirectToAction("Index");

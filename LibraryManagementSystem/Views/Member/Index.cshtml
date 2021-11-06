@@ -11,33 +11,33 @@
 </head>
 
 <div>
-    <h2 id="tableTitle" style="background-color:gray;">Members</h2>
+    <h2 id="tableTitle" style="background-color: lightyellow;">Members</h2>
 </div>
-<table style="position: center; background-color: black; table-layout: auto;">
-    <tr>
-        <th style="background-color:lightgray;">Member Id</th>
-        <th style="background-color:lightgray;">Member Name</th>
-        <th style="background-color:lightgray;">Member Surname</th>
-        <th style="background-color:lightgray;">Email</th>
-        <th style="background-color:lightgray;">Username</th>
-        <th style="background-color:lightgray;">Password</th>
-        <th style="background-color:lightgray;">Phone Number</th>
-        <th style="background-color:lightgray;">Delete</th>
-        <th style="background-color:lightgray;">Update</th>
+<table class="table table-striped" style="position: center; background-color: lightgray; table-layout: auto;">
+    <tr style="background-color:greenyellow;">
+        <th>Member Id</th>
+        <th>Member Name</th>
+        <th>Member Surname</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Phone Number</th>
+        <th>Delete</th>
+        <th>Update</th>
     </tr>
 
     @foreach (var member in Model)
     {
         <tr>
-            <td style="background-color: lightgray;">@member.ID</td>
-            <td style="background-color: lightgray;">@member.NAME</td>
-            <td style="background-color: lightgray;">@member.SURNAME</td>
-            <td style="background-color: lightgray;">@member.EMAIL</td>
-            <td style="background-color: lightgray;">@member.USERNAME</td>
-            <td style="background-color: lightgray;">@member.PASSWORD</td>
-            <td style="background-color: lightgray;">@member.TELNUMBER</td>
-            <td style="background-color: lightgray;"><a href="/Member/DeleteMember/@member.ID" class="btn btn-danger" onclick="return confirm(' Are you sure you want to delete Employee:\n @member.NAME @member.SURNAME')" style="background-color:darkred">Delete</a></td>
-            <td style="background-color: lightgray;"><a href="/Member/GetMember/@member.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
+            <td>@member.ID</td>
+            <td>@member.NAME</td>
+            <td>@member.SURNAME</td>
+            <td>@member.EMAIL</td>
+            <td>@member.USERNAME</td>
+            <td>@member.PASSWORD</td>
+            <td>@member.TELNUMBER</td>
+            <td><a href="/Member/DeleteMember/@member.ID" class="btn btn-danger" onclick="return confirm(' Are you sure you want to delete Employee:\n @member.NAME @member.SURNAME')" style="background-color:darkred">Delete</a></td>
+            <td><a href="/Member/GetMember/@member.ID" class="btn btn-info" style="background-color:darkseagreen;color:black">Update</a></td>
         </tr>
     }
 </table>
