@@ -2,13 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\LibraryManagementSystem",
-    "\\LibraryManagementSystem\\Models",
-    "\\LibraryManagementSystem\\Models\\Entity",
     "\\LibraryManagementSystem\\Views",
     "\\LibraryManagementSystem\\Views\\Author",
     "\\LibraryManagementSystem\\Views\\Book",
-    "\\LibraryManagementSystem\\Views\\Panel"
+    "\\LibraryManagementSystem\\Views\\Display",
+    "\\LibraryManagementSystem\\Views\\Panel",
+    "\\LibraryManagementSystem\\web2"
   ],
-  "SelectedNode": "\\LibraryManagementSystem\\LibraryManagementSystem.sln",
+  "SelectedNode": "\\LibraryManagementSystem\\Views\\Book\\AddBook.cshtml",
   "PreviewInSolutionExplorer": false
 }
