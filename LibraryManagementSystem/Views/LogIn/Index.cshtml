@@ -12,8 +12,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<link href="~/weblogin/css/fontawesome-all.css" rel="stylesheet" />
-<link href="~/weblogin/css/style.css" rel="stylesheet" />
+
 
 <head>
     <title>TAU Library Login Form</title>
@@ -25,6 +24,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- /meta tags -->
     <!-- custom style sheet -->
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/weblogin/css/fontawesome-all.css" rel="stylesheet" />
+    <link href="~/weblogin/css/style.css" rel="stylesheet" />
     <!-- /custom style sheet -->
     <!-- fontawesome css -->
     <link href="css/fontawesome-all.css" rel="stylesheet" />
@@ -39,27 +40,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <body>
     <h1>TAU Library Login Form</h1>
-    <div class=" w3l-login-form">
+    <div class="w3l-login-form">
         <h2>Login Here</h2>
-        <form action="~/Panel/Index" method="POST">
-
+        @using (Html.BeginForm("Index", "LogIn", FormMethod.Post, new { @autocomplete = "off" }))
+        {
             <div class=" w3l-form-group">
                 <label>Username:</label>
                 <div class="group">
                     <i class="fas fa-user"></i>
-                    <input type="text" class="form-control" placeholder="Username" required="required" />
+                    <input type="text" class="form-control" placeholder="Username" name="USERNAME" maxlength="20" required="required" />
                 </div>
             </div>
             <div class=" w3l-form-group">
                 <label>Password:</label>
                 <div class="group">
                     <i class="fas fa-unlock"></i>
-                    <input type="password" class="form-control" placeholder="Password" required="required" />
+                    <input type="password" class="form-control" placeholder="Password" name="PASSWORD" maxlength="20" required="required" />
                 </div>
             </div>
-            
+
             <button type="submit">Login</button>
-        </form>
+        }
         <p class=" w3l-register-p">Don't have an account?<a href="~/Register/Index" class="register"> Register</a></p>
     </div>
     <footer>

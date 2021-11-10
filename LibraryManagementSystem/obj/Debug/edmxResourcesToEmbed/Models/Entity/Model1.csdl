@@ -218,6 +218,7 @@
       <End Role="ACTION_TABLE" EntitySet="ACTION_TABLE" />
     </AssociationSet>
     <EntitySet Name="CONTACT_TABLE" EntityType="DB_LIBRARYModel.CONTACT_TABLE" />
+    <EntitySet Name="MESSAGE_TABLE" EntityType="DB_LIBRARYModel.MESSAGE_TABLE" />
   </EntityContainer>
   <Association Name="FK_ACTION_TABLE_EMPLOYEE_TABLE">
     <End Type="DB_LIBRARYModel.EMPLOYEE_TABLE" Role="EMPLOYEE_TABLE" Multiplicity="0..1" />
@@ -240,5 +241,16 @@
     <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="TOPIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="MESSAGE" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MESSAGE_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SENDER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RECEIVER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TOPIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MESSAGECONTENT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="DATE" Type="DateTime" Precision="0" />
   </EntityType>
 </Schema>

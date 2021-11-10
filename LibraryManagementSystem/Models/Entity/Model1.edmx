@@ -87,6 +87,17 @@
           <Property Name="TELNUMBER" Type="varchar" MaxLength="20" />
           <Property Name="SCHOOL" Type="varchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="MESSAGE_TABLE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SENDER" Type="varchar" MaxLength="50" />
+          <Property Name="RECEIVER" Type="varchar" MaxLength="50" />
+          <Property Name="TOPIC" Type="varchar" MaxLength="50" />
+          <Property Name="MESSAGECONTENT" Type="varchar" MaxLength="500" />
+          <Property Name="DATE" Type="smalldatetime" />
+        </EntityType>
         <EntityType Name="PENALTY_TABLE">
           <Key>
             <PropertyRef Name="ID" />
@@ -201,6 +212,7 @@
           <EntitySet Name="CONTACT_TABLE" EntityType="Self.CONTACT_TABLE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EMPLOYEE_TABLE" EntityType="Self.EMPLOYEE_TABLE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MEMBER_TABLE" EntityType="Self.MEMBER_TABLE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MESSAGE_TABLE" EntityType="Self.MESSAGE_TABLE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PENALTY_TABLE" EntityType="Self.PENALTY_TABLE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_ACTION_TABLE_BOOK_TABLE" Association="Self.FK_ACTION_TABLE_BOOK_TABLE">
@@ -454,6 +466,7 @@
             <End Role="ACTION_TABLE" EntitySet="ACTION_TABLE" />
           </AssociationSet>
           <EntitySet Name="CONTACT_TABLE" EntityType="DB_LIBRARYModel.CONTACT_TABLE" />
+          <EntitySet Name="MESSAGE_TABLE" EntityType="DB_LIBRARYModel.MESSAGE_TABLE" />
         </EntityContainer>
         <Association Name="FK_ACTION_TABLE_EMPLOYEE_TABLE">
           <End Type="DB_LIBRARYModel.EMPLOYEE_TABLE" Role="EMPLOYEE_TABLE" Multiplicity="0..1" />
@@ -476,6 +489,17 @@
           <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TOPIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MESSAGE" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MESSAGE_TABLE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SENDER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RECEIVER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TOPIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MESSAGECONTENT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DATE" Type="DateTime" Precision="0" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -592,6 +616,18 @@
                 <ScalarProperty Name="TOPIC" ColumnName="TOPIC" />
                 <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
                 <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MESSAGE_TABLE">
+            <EntityTypeMapping TypeName="DB_LIBRARYModel.MESSAGE_TABLE">
+              <MappingFragment StoreEntitySet="MESSAGE_TABLE">
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="MESSAGECONTENT" ColumnName="MESSAGECONTENT" />
+                <ScalarProperty Name="TOPIC" ColumnName="TOPIC" />
+                <ScalarProperty Name="RECEIVER" ColumnName="RECEIVER" />
+                <ScalarProperty Name="SENDER" ColumnName="SENDER" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

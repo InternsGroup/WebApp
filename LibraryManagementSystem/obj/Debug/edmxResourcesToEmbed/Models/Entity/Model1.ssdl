@@ -82,6 +82,17 @@
     <Property Name="TELNUMBER" Type="varchar" MaxLength="20" />
     <Property Name="SCHOOL" Type="varchar" MaxLength="100" />
   </EntityType>
+  <EntityType Name="MESSAGE_TABLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SENDER" Type="varchar" MaxLength="50" />
+    <Property Name="RECEIVER" Type="varchar" MaxLength="50" />
+    <Property Name="TOPIC" Type="varchar" MaxLength="50" />
+    <Property Name="MESSAGECONTENT" Type="varchar" MaxLength="500" />
+    <Property Name="DATE" Type="smalldatetime" />
+  </EntityType>
   <EntityType Name="PENALTY_TABLE">
     <Key>
       <PropertyRef Name="ID" />
@@ -196,6 +207,7 @@
     <EntitySet Name="CONTACT_TABLE" EntityType="Self.CONTACT_TABLE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EMPLOYEE_TABLE" EntityType="Self.EMPLOYEE_TABLE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MEMBER_TABLE" EntityType="Self.MEMBER_TABLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MESSAGE_TABLE" EntityType="Self.MESSAGE_TABLE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PENALTY_TABLE" EntityType="Self.PENALTY_TABLE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_ACTION_TABLE_BOOK_TABLE" Association="Self.FK_ACTION_TABLE_BOOK_TABLE">

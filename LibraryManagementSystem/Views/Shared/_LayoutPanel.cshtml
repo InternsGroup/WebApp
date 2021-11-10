@@ -2,8 +2,6 @@
 @{
     Layout = null;
 }
-<link href="~/panelweb/css/styles.css" rel="stylesheet" />
-<script src="~/panelweb/js/scripts.js"></script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +11,8 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Profil Page</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="~/Content/LayoutPanel.css" rel="stylesheet" />
+    <link href="~/Content/messageIndex.css" rel="stylesheet" />
 </head>
 <body>
     <div class="d-flex" id="wrapper">
@@ -24,9 +20,10 @@
         <div class="border-end bg-white" id="sidebar-wrapper">
             <div class="sidebar-heading border-bottom bg-light">TAU Library</div>
             <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Home Page </a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">My Profile</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">My Messages</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="~/Display/Index">Home Page </a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="~/Panel/Index">My Profile</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="~/Message/Index">My Messages</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="~/Message/NewMessage">New Message</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">My Books</a>
             </div>
         </div>
@@ -53,6 +50,6 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <script src="~/Scripts/LayoutPanel.js"></script>
 </body>
 </html>

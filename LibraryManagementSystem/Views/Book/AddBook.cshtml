@@ -35,6 +35,10 @@
         <label>Page</label>
         @Html.TextBoxFor(book => book.PAGE, new { @class = "form-control", @required = "required", @maxlength = "4", @onkeypress = "return isNumberKey(event)" })
     </div>
+    <div style="margin-top: 10px">
+        <label>Book Image Link</label>
+        @Html.TextBoxFor(book => book.BOOKIMAGE, new { @class = "form-control", @required = "required", @maxlength = "250", })
+    </div>
     <div style="margin-top:20px">
         <button id="defaultBtn" class="btn btn-danger" style="background-color: darkseagreen; margin-bottom: 15px; color:black">Add Book</button>
     </div>
