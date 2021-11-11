@@ -19,7 +19,6 @@ namespace LibraryManagementSystem.Controllers
             {
                 books = books.Where(book => book.NAME.Contains(searchInput));
             }
-            //var books = db.BOOK_TABLE.ToList();
             return View(books.ToList());
         }
 
@@ -88,6 +87,7 @@ namespace LibraryManagementSystem.Controllers
             book.AUTHOR = author.ID;
             book.PRINTDATE = bookObj.PRINTDATE;
             book.PAGE = bookObj.PAGE;
+            book.BOOKIMAGE = bookObj.BOOKIMAGE;
             book.STATUS = true;
             db.SaveChanges();
             return RedirectToAction("Index");

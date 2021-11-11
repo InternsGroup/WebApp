@@ -13,7 +13,7 @@ namespace LibraryManagementSystem.Controllers
         DB_LIBRARYEntities db = new DB_LIBRARYEntities();
         public ActionResult Index()
         {
-            var loanedBooksList = db.ACTION_TABLE.ToList();
+            var loanedBooksList = db.ACTION_TABLE.Where(action => action.ACTIONSTATUS == false).ToList();
             return View(loanedBooksList);
         }
 
@@ -54,6 +54,7 @@ namespace LibraryManagementSystem.Controllers
             else
             {
                 bookObj.STATUS = false;
+                lendObj.ACTIONSTATUS = false;
                 db.SaveChanges();
             }
 
@@ -76,7 +77,7 @@ namespace LibraryManagementSystem.Controllers
             actionObj.BOOK_TABLE.STATUS = true;
 
             //geri verilecek kitaplar listesinden kaldır
-            db.ACTION_TABLE.Remove(actionObj);
+            //db.ACTION_TABLE.Remove(actionObj);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

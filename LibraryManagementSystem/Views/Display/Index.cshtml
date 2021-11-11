@@ -39,17 +39,28 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="~/Register/Index">Register</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="~/LogIn/Index">LogIn</a>
-                    </li>
-                    @if (this.User.Identity.IsAuthenticated)
+                    @if (!this.User.Identity.IsAuthenticated)
                     {
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="~/Panel/Index">My Profile</a>
-                    </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="~/Register/Index">Register</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="~/LogIn/Index">LogIn</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="~/Panel/Index">My Profile</a>
+                        </li>
+                        <!--Gecici olarak eklendi-->
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="~/Author/Index">Admin Panel</a>
+                        </li>
+                        <!--                     -->
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="~/Panel/LogOut">Logout</a>
+                        </li>
                     }
 
                 </ul>
@@ -105,7 +116,7 @@
                 @foreach (var book in Model)
                 {
                     <div class="col-md-6 col-lg-4">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1" style="width:200px;height:300px">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white">
                                     <i class="fas fa-plus fa-3x"></i>
@@ -125,7 +136,7 @@
 
     <!--Library Photos from TAU-->
 
-    
+
     <section class="page-section portfolio" id="portfolio">
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Library Photos</h2>
         <meta charset="utf-8">
@@ -271,7 +282,7 @@
                             </div>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>Phone Number</label>
+                                    <label>Topic</label>
                                     <input class="form-control" name="TOPIC" id="topic" type="tel" placeholder="Topic" required="required" data-validation-required-message="Please enter the name of topic.">
                                     <p class="help-block text-danger"></p>
                                 </div>

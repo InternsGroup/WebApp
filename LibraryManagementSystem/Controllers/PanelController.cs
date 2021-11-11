@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using LibraryManagementSystem.Models.Entity;
 
 namespace LibraryManagementSystem.Controllers
@@ -34,6 +35,12 @@ namespace LibraryManagementSystem.Controllers
             ViewBag.Message = "Info successfully updated.";
             db.SaveChanges();
             return View(member);
+        }
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Display");
         }
     }
 }
